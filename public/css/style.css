@@ -39,6 +39,7 @@ Version: 1.0
 				- Navigation Widget
 				- Tags Widget
 	- Responsive Design Styles
+  - Green Overlay
 -------------------------------------------------------------------*/
 
 
@@ -194,183 +195,6 @@ body {
   width: calc(33.3333333333% - 48px);
 }
 
-/* Dark Body
-================================================== */
-
-body.dark,
-body.dark .bl-main>section:nth-child(4).bl-expand .contact .leftside {
-  background: #111;
-}
-
-body.dark .resume-list-item:not(.is-active) .resume-list-item-inner,
-body.dark div.bl-panel-items>div.bl-show-work,
-body.dark div.bl-panel-items>div,
-body.dark .bl-main>section:nth-child(4),
-body.dark .bl-main>section:nth-child(2),
-body.dark .bl-main>section:nth-child(3),
-body.dark .resume-card-body,
-body.dark .bl-main>section.bl-expand,
-body.blog.dark,
-body.blog.dark .btn.back {
-  background: #222;
-}
-
-body.dark .bl-main>section.topleft .bl-box .ah-headline.clip .my-name,
-body.dark .page-title h2 span:first-child,
-body.dark .page-title h2 span:nth-child(2)::before,
-body.dark .personal-info h6,
-body.dark .personal-info ul li span,
-body.dark .resume-content h6,
-body.dark .bl-main>section:nth-child(4).bl-expand .contact .rightside h6,
-body.blog.dark  article h4,
-body.blog.dark .sidebar .widget-title,
-body.dark div.bl-panel-items>div,
-body.blog.dark .widget-tags ul > li a:hover {
-  color: #fff;
-}
-
-body.dark .bl-main>section.topleft .bl-box .ah-headline span:first-child,
-body.dark .bl-content p,
-body.dark .personal-info ul li,
-body.dark .badges h6,
-body.dark .bl-main>section:nth-child(4).bl-expand .contact .leftside,
-body.dark .bl-main>section:nth-child(4).bl-expand .contact .rightside .input-field label,
-body.blog.dark .widget.recent-posts .entry-title a,
-body.blog.dark .widget-search input {
-  color: #eee;
-}
-
-body.dark .resume-card-header {
-  background: #151515;
-}
-
-body.dark .bl-main>section:nth-child(4).bl-expand .contact .rightside .input-field label.active {
-  color: #eee !important;
-}
-
-body.dark .resume-container {
-  border-top: 1px solid #333;
-  border-bottom: 1px solid #333;
-}
-
-body.dark .resume-list-item {
-  background: rgba(255, 255, 255, 0.1) !important;
-}
-
-body.dark .resume-card-header {
-  border-bottom: 1px solid #333;
-}
-
-body.dark .resume-card {
-  box-shadow: none;
-  border: 1px solid #333;
-}
-
-body.dark .resume-list-item:not(.is-active):hover {
-  background: rgba(255, 255, 255, 0.15) !important;
-}
-
-body.dark .badges h3 i {
-  color: #777;
-}
-
-body.dark .divider .outer-line {
-  border-bottom: 1px solid #666;
-}
-
-body.dark .resume-list-item-title {
-  color: #888;
-}
-
-body.dark #bl-work-items>div a, body.dark .bl-main>section:nth-child(4).bl-expand .contact .leftside {
-  border: 1px solid #333;
-}
-
-body.dark .bl-main>section:nth-child(4).bl-expand .contact .leftside span i {
-  color: rgba(255, 255, 255, .3);
-}
-
-body.dark .bl-main>section:nth-child(4).bl-expand .contact .rightside .input-field input[type=text],
-body.dark .bl-main>section:nth-child(4).bl-expand .contact .rightside .input-field input[type=email],
-body.dark .bl-main>section:nth-child(4).bl-expand .contact .rightside .input-field textarea {
-  color: #fff !important;
-  border-bottom: 1px solid #666;
-}
-body.dark div.bl-panel-items>div>div hr {
-	background: #333;
-}
-
-body.blog.dark p,
-body.blog.dark  .meta span {
-  color: #eee;
-}
-
-body.blog.dark  .widget {
-  background-color: #333;
-}
-
-body.blog.dark  .widget.recent-posts ul li,
-body.blog.dark  .sidebar ul.nav-tabs li,
-body.blog.dark  .comments-list .comment:not(.last) {
-  border-bottom: 1px solid #555;
-}
-
-body.blog.dark .sidebar ul.nav-tabs li a,
-body.blog.dark .widget-tags ul > li a {
-  color: #aaa;
-}
-
-body.blog.dark .meta {
-  border-top: 1px solid #555;
-  border-bottom: 1px solid #555;
-}
-
-body.blog.dark .pagination li:hover {
-  background: #333;
-}
-
-body.blog.dark .pagination li a {
-  color: #eee;
-}
-
-body.blog.dark .widget.recent-posts ul li:last-child {
-  border: 0;
-  padding-bottom: 0;
-  margin-bottom: 0;
-}
-
-body.blog.dark .comments-form  form .input-field label {
-  color: #eee;
-}
-
-body.blog.dark .comments-form  form .input-field label.active {
-  color: #eee !important;
-}
-
-body.blog.dark .comments-form  form .input-field input[type=text],
-body.blog.dark .comments-form  form .input-field input[type=email],
-body.blog.dark .comments-form  form .input-field textarea {
-  color: #fff !important;
-  border-bottom: 1px solid #555;
-}
-
-body.blog.dark .comments-heading,
-body.blog.dark .comments-list .comment-author,
-body.blog.dark .comments-list .comment-reply {
-  color: #fff;
-}
-
-body.blog.dark .comments-list .comment-date {
-  color: #aaa;
-}
-
-body.dark div.bl-panel-items>div>div img,
-body.dark .carousel.carousel-slider,
-body.dark .videocontainer, 
-body.dark .responsive-video {
-  border: 1px solid #333;
-}
-
 /* Big Titles
 ================================================== */
 
@@ -452,7 +276,7 @@ body.dark .responsive-video {
   vertical-align: middle;
 }
 
-.divider .fa {
+.divider .fa, .divider .fas, .divider .far {
   font-size: 20px;
   margin: 0 20px;
 }
@@ -1348,7 +1172,7 @@ div.bl-panel-items a.btn {
 
 /*** Left Side ***/
 
-.bl-main>section:nth-child(4).bl-expand .contact .leftside {
+.bl-main>section.bl-expand .contact .leftside {
   background: #f2f2f2;
   color: #656c6d;
   padding: 24px;
@@ -1356,16 +1180,16 @@ div.bl-panel-items a.btn {
   border: 1px solid #ddd;
 }
 
-.bl-main>section:nth-child(4).bl-expand .contact .leftside h6 {
+.bl-main>section.bl-expand .contact .leftside h6 {
   margin: 18px 0;
   font-size: 20px;
 }
 
-.bl-main>section:nth-child(4).bl-expand .contact .leftside h6:first-child {
+.bl-main>section.bl-expand .contact .leftside h6:first-child {
   margin-top: 0;
 }
 
-.bl-main>section:nth-child(4).bl-expand .contact .leftside span i {
+.bl-main>section.bl-expand .contact .leftside span i {
   padding-right: 10px;
   color: rgba(0, 0, 0, .2);
 }
@@ -1389,7 +1213,7 @@ ul.social-intro li a {
   transition: .3s ease-out;
 }
 
-.bl-main>section:nth-child(4).bl-expand ul.social-intro li a {
+.bl-main>section.bl-expand ul.social-intro li a {
   width: 35px;
   height: 35px;
   display: block;
@@ -1397,134 +1221,134 @@ ul.social-intro li a {
   border-radius: 50%;
 }
 
-.bl-main>section:nth-child(4).bl-expand ul.social-intro li.facebook a {
+.bl-main>section.bl-expand ul.social-intro li.facebook a {
   background: #3b5998;
 }
 
-.bl-main>section:nth-child(4).bl-expand ul.social-intro li.twitter a {
+.bl-main>section.bl-expand ul.social-intro li.twitter a {
   background: #1da1f2;
 }
 
-.bl-main>section:nth-child(4).bl-expand ul.social-intro li.google-plus a {
+.bl-main>section.bl-expand ul.social-intro li.google-plus a {
   background: #dd4b39;
 }
 
-.bl-main>section:nth-child(4).bl-expand ul.social-intro li.linkedin a {
+.bl-main>section.bl-expand ul.social-intro li.linkedin a {
   background: #0077b5;
 }
 
-.bl-main>section:nth-child(4).bl-expand ul.social-intro li.dribbble a {
+.bl-main>section.bl-expand ul.social-intro li.dribbble a {
   background: #ea4c89;
 }
 
 
 /*** Right Side ***/
 
-.bl-main>section:nth-child(4).bl-expand .contact .rightside {
+.bl-main>section.bl-expand .contact .rightside {
   padding: 0 1.5rem;
 }
 
-.bl-main>section:nth-child(4).bl-expand .contact .rightside p {
+.bl-main>section.bl-expand .contact .rightside p {
   font-size: 14px;
   margin-top: 14px;
 }
 
-.bl-main>section:nth-child(4).bl-expand .contact .rightside .input-field {
+.bl-main>section.bl-expand .contact .rightside .input-field {
   margin-bottom: 24px;
 }
 
-.bl-main>section:nth-child(4).bl-expand .contact .rightside .submit-form {
+.bl-main>section.bl-expand .contact .rightside .submit-form {
   padding-left: 0;
 }
 
-.bl-main>section:nth-child(4).bl-expand .contact .rightside .form-message {
+.bl-main>section.bl-expand .contact .rightside .form-message {
   margin-top: 24px;
   padding-left: 0;
 }
 
-.bl-main>section:nth-child(4).bl-expand .contact .rightside form button {
+.bl-main>section.bl-expand .contact .rightside form button {
   height: 42px;
   width: 100%;
   line-height: 42px;
   font-size: 15px;
   transition: 0.3s ease-in-out;
 }
-.bl-main>section:nth-child(4).bl-expand .contact .rightside .input-field textarea {
+.bl-main>section.bl-expand .contact .rightside .input-field textarea {
 	height:106px;
 }
-.bl-main>section:nth-child(4).bl-expand .contact .rightside form .input-field input[type=text],
-.bl-main>section:nth-child(4).bl-expand .contact .rightside form .input-field input[type=email],
-.bl-main>section:nth-child(4).bl-expand .contact .rightside form .input-field textarea {
+.bl-main>section.bl-expand .contact .rightside form .input-field input[type=text],
+.bl-main>section.bl-expand .contact .rightside form .input-field input[type=email],
+.bl-main>section.bl-expand .contact .rightside form .input-field textarea {
   border-bottom: 1px solid #ddd;
   margin-left: 40px;
   width: calc(100% - 2.5rem);
 }
 
-.bl-main>section:nth-child(4).bl-expand .contact .rightside .input-field label {
+.bl-main>section.bl-expand .contact .rightside .input-field label {
   color: #666;
   margin-left: 38px;
 }
 
-.bl-main>section:nth-child(4).bl-expand .contact .rightside .input-field label.active {
+.bl-main>section.bl-expand .contact .rightside .input-field label.active {
   color: #666 !important;
 }
 
-.bl-main>section:nth-child(4).bl-expand .contact .rightside .input-field input[type=text]:focus+label {
+.bl-main>section.bl-expand .contact .rightside .input-field input[type=text]:focus+label {
   color: #666;
 }
 
-.bl-main>section:nth-child(4).bl-expand .contact .rightside .input-field input[type=text]:focus,
-.bl-main>section:nth-child(4).bl-expand .contact .rightside .input-field input[type=email]:focus,
-.bl-main>section:nth-child(4).bl-expand .contact .rightside .input-field textarea:focus {
+.bl-main>section.bl-expand .contact .rightside .input-field input[type=text]:focus,
+.bl-main>section.bl-expand .contact .rightside .input-field input[type=email]:focus,
+.bl-main>section.bl-expand .contact .rightside .input-field textarea:focus {
   border-bottom: 1px solid #666;
   box-shadow: none !important;
 }
 
-.bl-main>section:nth-child(4).bl-expand .contact .rightside .input-field input[type=text].valid,
-.bl-main>section:nth-child(4).bl-expand .contact .rightside .input-field input[type=email].valid {
+.bl-main>section.bl-expand .contact .rightside .input-field input[type=text].valid,
+.bl-main>section.bl-expand .contact .rightside .input-field input[type=email].valid {
   border-bottom: 1px solid #28a745;
   box-shadow: none !important;
 }
 
-.bl-main>section:nth-child(4).bl-expand .contact .rightside .input-field input[type=text].invalid,
-.bl-main>section:nth-child(4).bl-expand .contact .rightside .input-field input[type=email].invalid {
+.bl-main>section.bl-expand .contact .rightside .input-field input[type=text].invalid,
+.bl-main>section.bl-expand .contact .rightside .input-field input[type=email].invalid {
   border-bottom: 1px solid #dc3545;
   box-shadow: none !important;
 }
 
-.bl-main>section:nth-child(4).bl-expand .contact .rightside form .input-field i.prefix {
+.bl-main>section.bl-expand .contact .rightside form .input-field i.prefix {
   font-size: 22px;
   top: 7px;
   color: #ccc;
   width: 1em;
 }
 
-.bl-main>section:nth-child(4).bl-expand .contact .rightside form .input-field label {
+.bl-main>section.bl-expand .contact .rightside form .input-field label {
   font-size: 15px;
 }
 
-.bl-main>section:nth-child(4).bl-expand .contact .rightside form .output_message {
+.bl-main>section.bl-expand .contact .rightside form .output_message {
   display: block;
   color: #fff;
   height: 42px;
   line-height: 42px;
 }
 
-.bl-main>section:nth-child(4).bl-expand .contact .rightside form .output_message.success {
+.bl-main>section.bl-expand .contact .rightside form .output_message.success {
   background: #28a745;
 }
 
-.bl-main>section:nth-child(4).bl-expand .contact .rightside form .output_message.success:before {
+.bl-main>section.bl-expand .contact .rightside form .output_message.success:before {
   font-family: FontAwesome;
   content: "\f14a";
   padding-right: 10px;
 }
 
-.bl-main>section:nth-child(4).bl-expand .contact .rightside form .output_message.error {
+.bl-main>section.bl-expand .contact .rightside form .output_message.error {
   background: #dc3545;
 }
 
-.bl-main>section:nth-child(4).bl-expand .contact .rightside form .output_message.error:before {
+.bl-main>section.bl-expand .contact .rightside form .output_message.error:before {
   font-family: FontAwesome;
   content: "\f071";
   padding-right: 10px;
@@ -1944,11 +1768,11 @@ body.blog .pagination li a i {
     left: 24px !important;
   }
 
-  .bl-main>section:nth-child(4).bl-expand .contact .rightside .submit-form {
+  .bl-main>section.bl-expand .contact .rightside .submit-form {
     padding-right: 0;
   }
 
-  .bl-main>section:nth-child(4).bl-expand .contact .rightside .form-message {
+  .bl-main>section.bl-expand .contact .rightside .form-message {
     padding-left: 0;
     margin-top: 15px;
   }
@@ -1992,9 +1816,6 @@ body.blog .pagination li a i {
 	.infos {
 		padding-bottom: 35px;
 	}
-  body.dark .bl-main>section:nth-child(4):not(.bl-expand) {
-    background: #222;
-  }
 
   .personal-info a.btn,
 	div.bl-panel-items a.btn {
@@ -2053,12 +1874,12 @@ body.blog .pagination li a i {
     margin-top: 45px;
   }
 
-  .bl-main>section:nth-child(4).bl-expand .contact .rightside {
+  .bl-main>section.bl-expand .contact .rightside {
     margin-top: 50px;
     padding: 0;
   }
 
-  .bl-main>section:nth-child(4).bl-expand .contact .leftside {
+  .bl-main>section.bl-expand .contact .leftside {
     padding-left: 15px;
     padding-right: 15px;
     padding-bottom: 24px;
@@ -2158,9 +1979,7 @@ body.blog .pagination li a i {
     padding: 24px 0;
   }
 
-  .bl-main>section:nth-child(2).bl-expand,
-	.bl-main>section:nth-child(3).bl-expand,
-	.bl-main>section:nth-child(4).bl-expand {
+	.bl-main>section.bl-expand {
     top: 24px;
   }
 
@@ -2176,8 +1995,8 @@ body.blog .pagination li a i {
     margin-top: 20px;
   }
 
-  .bl-main>section:nth-child(4).bl-expand form>div,
-	.bl-main>section:nth-child(4).bl-expand .bl-content>div>div>div.row>div {
+  .bl-main>section.bl-expand form>div,
+	.bl-main>section.bl-expand .bl-content>div>div>div.row>div {
     padding: 0;
   }
 
@@ -2247,7 +2066,7 @@ body.blog .pagination li a i {
     top: calc(49% - 45px);
   }
 
-  .bl-main>section:nth-child(2).bl-expand, .bl-main>section:nth-child(3).bl-expand, .bl-main>section:nth-child(4).bl-expand {
+  .bl-main>section.bl-expand {
     top: 15px;
     height: calc(100% - 30px);
   }
@@ -2297,4 +2116,59 @@ body.blog .pagination li a i {
     padding: 15px;
   }
   
+}
+
+/* =================================================================== */
+/* Green #72b626
+====================================================================== */
+
+.page-title h2 span:first-child::before,
+.page-title h2 span:nth-child(2),
+.divider .fa, .fas, .far
+.bl-main>section.topleft .bl-box .ah-words-wrapper, b.is-visible,
+.skills .resume-content i,
+.badges h3 span,
+.bl-main>section.bl-expand .contact .leftside h6,
+.bl-main>section.bl-expand .contact .rightside .input-field .prefix.active,
+body.blog .meta i,
+body.blog .meta a,
+.widget.recent-posts .entry-title a:hover,
+.sidebar ul.nav-tabs li.active a, 
+.sidebar ul.nav-tabs li:hover a,
+body.blog .btn.back-homepage,
+body.blog article h4:hover,
+.comments-list .comment-reply:hover,
+body.blog .btn.back,
+.personal-info a.btn.btn-blog,
+div.bl-panel-items nav span.bl-previous-work,
+div.bl-panel-items nav span.bl-next-work,
+div.bl-panel-items nav span.bl-icon-close {
+	color:#72b626;
+}
+
+.readmore.btn,
+body.blog .btn.back-homepage:hover,
+.personal-info a.btn,
+span.separator,
+.resume-list-item-inner,
+.carousel .indicators .indicator-item.active,
+#bl-work-items>div a div,
+div.bl-panel-items a.btn,
+.bl-main>section.bl-expand .contact .rightside form button,
+.widget-tags ul > li a:hover,
+body.blog .pagination li.active,
+.comments-form button,
+.comments-form button:hover,
+.comments-form button:focus,
+.comments-form button:active,
+body.blog .btn.back:hover,
+.personal-info a.btn.btn-blog:hover  {
+	background: #72b626;
+}
+.resume-card-name {
+	color: #72b626 !important;
+}
+body.blog .btn.back ,
+.personal-info a.btn.btn-blog {
+	border:1px solid #72b626;
 }
