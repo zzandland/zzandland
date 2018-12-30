@@ -10,20 +10,20 @@ class Main extends Component {
     super(props);
   }
 
-  openContactsModal(event) {
+  openSectionModal(modalType) {
     const { showModal } = this.props;
-    showModal('contacts', {
+    showModal(modalType, {
       open: true,
-    });
+    })
   }
 
   render() {
     return (
-      <div id="bl-main" class="bl-main">
+      <div id="bl-main" className="bl-main">
         <Intro />
-        <About />
-        <Portfolio />
-        <Contacts onClick={() => { this.openContactsModal() }}/>
+        <About onClick={() => { this.openSectionModal('about') }} />
+        <Portfolio onClick={() => { this.openSectionModal('portfolio') }} />
+        <Contacts onClick={() => { this.openSectionModal('contacts') }} />
         <ModalRoot />
       </div>
     );

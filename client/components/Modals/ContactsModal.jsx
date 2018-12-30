@@ -2,12 +2,12 @@ import React from 'react';
 import ContactsInfo from './ContactsInfo';
 import ContactsForm from './ContactsForm';
 
-export default (props) => (
+export default ({ closeModal }) => (
   <section className="bl-expand bl-expand-top">
     <div className="bl-content">
       <div className="container page-title center-align">
         <h2 className="center-align">
-          <span className="span-spacing" data-hover="get">get </span>
+          <span className="span-spacing span-heading" data-hover="get">get</span>
           <span data-hover="in touch">in touch</span>
         </h2>
       </div>
@@ -23,5 +23,6 @@ export default (props) => (
         </div>
       </div>
     </div>
+    <img onClick={closeModal} alt="close" src="images/close-button.png" className="bl-icon-close" />
   </section>
 )

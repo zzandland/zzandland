@@ -100,9 +100,13 @@ body {
   padding-left: 8px;
 }
 
-.btn:hover {
+.btn:hover, .btn:hover i.fas {
   box-shadow: none;
   color: #eee;
+}
+
+.btn i.fas {
+  color: white;
 }
 
 .uppercase {

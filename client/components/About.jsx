@@ -1,7 +1,7 @@
 import React from 'react';
 
-export default (props) => (
-  <section>
+export default ({ onClick }) => (
+  <section onClick={onClick}>
     <div className="bl-box valign-wrapper">
       <div className="page-title center-align">
         <h2 className="center-align">

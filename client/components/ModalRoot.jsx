@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Modal from 'react-modal';
+import AboutModal from './Modals/AboutModal';
+import PortfolioModal from './Modals/PortfolioModal';
 import ContactsModal from './Modals/ContactsModal';
 
 class ModalRoot extends Component {
@@ -19,19 +21,25 @@ class ModalRoot extends Component {
   }
 
   closeModal() {
-    this.setState({ modalIsOpen: false })
+    const { hideModal } = this.props;
+    hideModal();
+    this.setState({ modalIsOpen: false });
   }
 
   render() {
-    console.log(this.props);
     const { modalType, modalProps } = this.props;
     const { modalIsOpen } = this.state;
     if (!modalType) {
       return null;
     } else {
       let SpecificModal;
-          SpecificModal = <ContactsModal closeModal={() => { this.closeModal() }}/>;
-      console.log('next');
+      if (modalType === 'about') {
+        SpecificModal = <AboutModal closeModal={() => { this.closeModal() }}/>;
+      } else if (modalType === 'portfolio') {
+        SpecificModal = <PortfolioModal closeModal={() => { this.closeModal() }}/>;
+      } else if (modalType === 'contacts') {
+        SpecificModal = <ContactsModal closeModal={() => { this.closeModal() }}/>;
+      }
       return (
         <div>
           <Modal

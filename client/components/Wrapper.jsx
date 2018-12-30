@@ -3,7 +3,7 @@ import Portrait from './Portrait';
 import Main from '../containers/Main';
 
 export default (props) => (
-  <div class="wrapper">
+  <div className="wrapper">
     <Portrait />
     <Main />
   </div>
