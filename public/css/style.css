@@ -10,7 +10,6 @@ Version: 1.0
 /*------------------------------------------------------------------
 [Table of contents]
 	+ General
-		- Dark Body
 		- Big Titles
 		- Divider
 		- Preloader
@@ -161,6 +160,28 @@ body {
 .react-modal:focus {
   outline: none;
 }
+
+.Typist .Cursor {
+  display: inline-block; 
+}
+
+span.Cursor {
+  font-weight: 800;
+  color: #72b626 !important;
+}
+
+.Typist .Cursor--blinking {
+  opacity: 1;
+  animation: blink 1s linear infinite; 
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 @media only screen and (min-width: 601px) {
   .blog .container {
@@ -2129,7 +2150,7 @@ body.blog .pagination li a i {
 .page-title h2 span:first-child::before,
 .page-title h2 span:nth-child(2),
 .divider .fa, .fas, .far
-.bl-main>section.topleft .bl-box .ah-words-wrapper, b.is-visible,
+.bl-main>section.topleft .bl-box .ah-words-wrapper, div.Typist.is-visible,
 .skills .resume-content i,
 .badges h3 span,
 .bl-main>section.bl-expand .contact .leftside h6,
