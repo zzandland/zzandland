@@ -1,14 +1,17 @@
 import React from 'react';
+import EducationBlock from './ResumeEducationBlock';
 
-export default ({ education }) => {
-  return (
-    <div className="resume-content">
-      <div>
-        <h6 className="uppercase"><span>{`${education.degree} - `}</span>{education.institution}</h6>
-        <span className="date"><i className="far fa-calendar"></i>{education.years}</span>
-        <p></p>
-      </div>
-      <span className="separator"></span>
-    </div>
-  );
-}
+export default ({ educations, className, changeActiveItem }) => (
+  <div className={className} onClick={() => changeActiveItem('education')}>
+		<div className="resume-card-header">
+			<div className="resume-card-name"><i className="fa fa-graduation-cap"></i> Education</div>
+		</div>
+		<div className="resume-card-body education">
+			<div className="resume-card-body-container second-font">
+				{educations.concat(educations).map(education => (
+					<EducationBlock education={education} />
+				))}
+			</div>
+		</div>
+	</div>
+)

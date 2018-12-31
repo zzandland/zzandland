@@ -1,22 +1,26 @@
 import React from 'react';
+import SkillBlock from './ResumeSkillBlock.jsx';
 
-export default ({ skill }) => {
-  const star = [];
-  for (var i = 0; i < Math.floor(skill.proficiency); i++) {
-    star.push(<i className="fas fa-star"></i>);
-  }
-  if (skill.proficiency % 1 !== 0) {
-    star.push(<i className="fas fa-star-half-alt"></i>);
-    i++;
-  }
-  while (parseInt(i, 10) < 5) {
-    star.push(<i className="far fa-star"></i>);
-    i++;
-  }
-  return (
-    <div className="resume-content">
-      <h6 className="uppercase">{skill.name}</h6>
-      <p>{star}</p>
+export default ({ skills, className, changeActiveItem }) => (
+  <div className={className} onClick={() => changeActiveItem('skill') }>
+    <div className="resume-card-header">
+      <div className="resume-card-name"><i className="fa fa-star"></i> Skills</div>
     </div>
-  );
-}
+    <div className="resume-card-body skills">
+      <div className="resume-card-body-container second-font">
+        <div className="row">
+          <div className="col s6">
+            {skills.slice(0, Math.ceil(skills.length / 2)).map(skill => (
+              <SkillBlock skill={skill} />
+            ))}
+          </div>
+          <div className="col s6">
+            {skills.slice(Math.ceil(skills.length / 2)).map(skill => (
+              <SkillBlock skill={skill} />
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+)

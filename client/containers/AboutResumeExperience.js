@@ -1,16 +1,16 @@
 import { connect } from 'react-redux';
 import { changeActiveItem } from '../actions';
-import Resume from '../components/Modals/AboutSubComponents/Resume';
+import ResumeExperience from '../components/Modals/AboutSubComponents/ResumeExperience';
 
-const mapStateToProps = ({ Rendering }) => ({
-  activeMenu: Rendering.resumeActiveMenu,
+const mapStateToProps = ({ Self }) => ({
+  experiences: Self.experiences,
 });
 
 const mapDispatchToProps = dispatch => ({
   changeActiveItem: item => dispatch(changeActiveItem(item)),
 });
 
-export default connect (
+export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(Resume);
+)(ResumeExperience)

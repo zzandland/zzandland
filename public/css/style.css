@@ -163,12 +163,12 @@ body {
 
 .Typist .Cursor {
   display: inline-block; 
+  font-weight: 900;
 }
 
 span.Cursor {
-  font-weight: 800;
   color: #72b626 !important;
-}
+} 
 
 .Typist .Cursor--blinking {
   opacity: 1;
@@ -666,6 +666,7 @@ section.bl-expand .bl-icon-close {
   padding: 50px 0;
   border-top: 1px solid #efe9e9;
   border-bottom: 1px solid #efe9e9;
+  height: 730px;
 }
 
 .resume-cards {
@@ -738,6 +739,7 @@ section.bl-expand .bl-icon-close {
 .resume-card.back {
   transform: scale(0.9) translate(0, -60px);
   z-index: 1;
+  height: 510px;
 }
 
 .resume-card.back:hover {
@@ -751,6 +753,7 @@ section.bl-expand .bl-icon-close {
 .resume-card.back-back {
   transform: scale(0.8) translate(0, -128px);
   z-index: 0;
+  height: 500px;
 }
 
 .resume-card.back-back .resume-card-name {
@@ -759,6 +762,10 @@ section.bl-expand .bl-icon-close {
 
 .resume-card.back-back:hover {
   transform: scale(0.8) translate(0, -138px);
+}
+
+.resume-card .row {
+  margin-bottom: 0;
 }
 
 .resume-card-header {
@@ -798,6 +805,14 @@ section.bl-expand .bl-icon-close {
 
 .resume-content span.date i {
   padding-right: 10px;
+}
+
+.resume-content span.separator {
+  display: block;
+}
+
+.resume-content:last-of-type span.separator {
+  display: none;
 }
 
 .resume-content h6 {

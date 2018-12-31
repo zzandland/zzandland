@@ -1,17 +1,17 @@
 import React from 'react';
+import ExperienceBlock from './ResumeExperienceBlock.jsx';
 
-export default ({ experience }) => {
-  if (experience.company !== '') {
-    experience.company = `- ${experience.company}`;
-  }
-  return (
-    <div className="resume-content">
-      <div>
-        <h6 className="uppercase"><span>{experience.title}</span>{experience.company}</h6>
-        <span className="date"><i className="far fa-calendar"></i>{experience.years}</span>
-        <p>{experience.description.split(/\n/).map(sentence => (<li>{sentence}</li>))}</p>
-      </div>
-      <span className="separator"></span>
+export default ({ experiences, className, changeActiveItem }) => (
+  <div className={className} onClick={() => changeActiveItem('experience')}>
+    <div className="resume-card-header">
+      <div className="resume-card-name"><i className="fa fa-briefcase"></i> Experience</div>
     </div>
-  )
-}
+    <div className="resume-card-body experience">
+      <div className="resume-card-body-container second-font">
+        {experiences.map(experience => (
+          <ExperienceBlock experience={experience} />
+        ))}
+      </div>
+    </div>
+  </div>
+)

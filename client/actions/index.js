@@ -12,3 +12,8 @@ export const showModal = (modalType, modalProps) => ({
 export const hideModal = () => ({
   type: 'HIDE_MODAL',
 });
+
+export const changeActiveItem = item => ({
+  type: 'CHANGE_ACTIVE_ITEM',
+  item,
+});
