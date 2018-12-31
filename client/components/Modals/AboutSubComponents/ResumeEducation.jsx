@@ -8,7 +8,7 @@ export default ({ educations, className, changeActiveItem }) => (
 		</div>
 		<div className="resume-card-body education">
 			<div className="resume-card-body-container second-font">
-				{educations.concat(educations).map(education => (
+				{educations.map(education => (
 					<EducationBlock education={education} />
 				))}
 			</div>

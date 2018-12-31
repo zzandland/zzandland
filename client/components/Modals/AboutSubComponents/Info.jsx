@@ -36,7 +36,11 @@ export default props => (
             <li><span className="font-weight-700">Skype: </span>zzandland</li>
           </ul>
         </div>
-        <a href="#" className="btn font-weight-700">
+        <a 
+          href="https://s3-us-west-1.amazonaws.com/zzandland.io/Resume+-+Si+Yong+Kim.pdf"
+          className="btn font-weight-700"
+          target="_blank"
+        >
     Download Resume <i className="far fa-file-pdf"></i>
         </a>
         <a href="blog-light.html" className="btn btn-blog font-weight-700">
