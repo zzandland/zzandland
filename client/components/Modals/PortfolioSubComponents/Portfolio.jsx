@@ -8,10 +8,17 @@ class Portfolio extends Component {
     };
   }
 
-  handleHover() {
+  mouseIn() {
     const { isHovered } = this.state;
     this.setState({
-      isHovered: !isHovered,
+      isHovered: true,
+    })
+  }
+
+  mouseOut() {
+    const { isHovered } = this.state;
+    this.setState({
+      isHovered: false,
     })
   }
 
@@ -29,8 +36,8 @@ class Portfolio extends Component {
     return (
       <div className="col s12 m6 l6 xl4" data-panel="panel-1">
         <a 
-          onMouseEnter={() => this.handleHover()}
-          onMouseLeave={() => this.handleHover()}
+          onMouseEnter={() => this.mouseIn()}
+          onMouseLeave={() => this.mouseOut()}
           onClick={() => this.openDetailsModal()}
         >
           <img className="responsive-img" src={portfolio.images[0]} alt="Project" />
