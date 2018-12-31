@@ -9,7 +9,7 @@ export default props => (
     </div>
     <div className="row">
       <div className="col s12 m4 profile-picture show-on-medium-and-down section-padding">
-        <img src="http://via.placeholder.com/594x1032" className="responsive-img my-picture" alt="My Photo" />
+        <img src="https://s3-us-west-1.amazonaws.com/zzandland.io/portrait.jpeg" className="responsive-img my-picture" alt="My Photo" />
       </div>
       <div className="col s12 m8 l12 xl12 personal-info section-padding">
         <h6 className="uppercase"><i className="fa fa-user"></i> Personal Info</h6>
