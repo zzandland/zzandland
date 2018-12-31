@@ -27,20 +27,20 @@ export default ({ activeMenu, changeActiveItem }) => {
 
   return (
     <div className="resume-container">
+      <div className="resume-list col l4 section-padding">
+        {menuList.map((menu, index) => {
+          const className = activeMenu === menu ? 'resume-list-item is-active' : 'resume-list-item';
+          return (
+            <div className={className} onClick={() => changeActiveItem(menu)} key={index}>
+              <div className="resume-list-item-inner">
+                <h6 className="resume-list-item-title uppercase"><i className="fa fa-briefcase"></i>{menu}</h6>
+              </div>
+            </div>
+          );
+        })}
+      </div>
       <div className="container">
-        <div className="valign-wrapper row">
-          <div className="resume-list col l4 section-padding">
-            {menuList.map((menu, index) => {
-              const className = activeMenu === menu ? 'resume-list-item is-active' : 'resume-list-item';
-              return (
-                <div className={className} onClick={() => changeActiveItem(menu)} key={index}>
-                  <div className="resume-list-item-inner">
-                    <h6 className="resume-list-item-title uppercase"><i className="fa fa-briefcase"></i>{menu}</h6>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+        <div className="valign-wrapper">
           <div className="col s12 m12 l8 resume-cards-container section-padding">
             <Media query="(max-width: 800px)">
               {matches => 
