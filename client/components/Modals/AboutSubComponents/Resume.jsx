@@ -1,4 +1,5 @@
 import React from 'react';
+import Media from 'react-media';
 import ResumeExperience from '../../../containers/AboutResumeExperience';
 import ResumeEducation from '../../../containers/AboutResumeEducation';
 import ResumeSkill from '../../../containers/AboutResumeSkill';
@@ -41,11 +42,23 @@ export default ({ activeMenu, changeActiveItem }) => {
             })}
           </div>
           <div className="col s12 m12 l8 resume-cards-container section-padding">
-            <div className="resume-cards">
-              <ResumeExperience className={selective.experience} />
-              <ResumeEducation className={selective.education} />
-              <ResumeSkill className={selective.skill} />
-            </div>
+            <Media query="(max-width: 800px)">
+              {matches => 
+                matches ? (
+                  <div className="resume-cards">
+                    <ResumeExperience className="resume-card resume-card-0" />
+                    <ResumeEducation className="resume-card resume-card-1" />
+                    <ResumeSkill className="resume-card resume-card-2" />
+                  </div>
+                ) : (
+                  <div className="resume-cards">
+                    <ResumeExperience className={selective.experience} />
+                    <ResumeEducation className={selective.education} />
+                    <ResumeSkill className={selective.skill} />
+                  </div>
+                )  
+              }
+            </Media>
           </div>
         </div>
       </div>

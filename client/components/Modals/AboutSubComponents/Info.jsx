@@ -32,7 +32,7 @@ export default props => (
             <li><span className="font-weight-700">Phone: </span>+1 415 691 5310</li>
             <li><span className="font-weight-700">Address: </span>1 St Francis Place #6208 San Francisco 94107</li>
             <li><span className="font-weight-700">Email: </span>zzandland@gmail.com</li>
-            <li><span className="font-weight-700">Spoken Langages: </span>English -Korean - Japanese</li>
+            <li><span className="font-weight-700">Spoken Langages: </span>English - Korean - Japanese</li>
             <li><span className="font-weight-700">Skype: </span>zzandland</li>
           </ul>
         </div>

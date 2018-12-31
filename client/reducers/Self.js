@@ -3,8 +3,7 @@ const initialState = {
     { title: 'Freelance Web Developer',
       company: '',
       years: 'Current',
-      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium orci sit amet mi ullamcorper. 
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium orci sit amet mi ullamcorper`,
+      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium orci sit amet mi ullamcorper.`,
     },
     { title: 'Course Designer & Instructor',
       company: 'North Toronto High School',

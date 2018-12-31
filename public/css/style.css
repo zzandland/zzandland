@@ -666,7 +666,6 @@ section.bl-expand .bl-icon-close {
   padding: 50px 0;
   border-top: 1px solid #efe9e9;
   border-bottom: 1px solid #efe9e9;
-  height: 730px;
 }
 
 .resume-cards {
@@ -894,6 +893,11 @@ span.separator {
   padding-right: 13px;
 }
 
+@media (max-width: 1115px) and (min-width:993px) {
+  .resume-list-item-title {
+    font-size: 0.9rem;
+  }
+}
 
 /*** Badges ***/
 
