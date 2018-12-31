@@ -10,7 +10,7 @@ export default ({ title, client, startDate, endDate, usedTech, link }) => (
         <li><i className="far fa-calendar-check"></i><span className="font-weight-700"> End Date </span>: <span className="font-weight-400 uppercase">{endDate}</span></li>
         : null
       }
-      <li><i className="fa fa-cogs"></i> <span className="font-weight-700">Used Stack</span> : <span className="font-weight-400 uppercase">{usedTech}</span></li>
+      <li><i className="fa fa-cogs"></i> <span className="font-weight-700">Used Tech</span> : <span className="font-weight-400 uppercase">{usedTech}</span></li>
     </ul>
     <hr />
     <a href={link} target="_blank" className="waves-effect waves-light btn font-weight-700">Preview <i className="fas fa-share-square"></i></a>
