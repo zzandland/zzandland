@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import { showModal, hideModal } from '../actions';
-import Main from '../components/Main';
+import { showModal } from '../../../actions';
+import Portfolio from '../../../components/Modals/PortfolioSubComponents/Portfolio';
 
 const mapStateToProps = ({ Modal }) => ({
   modalType: Modal.modalType,
@@ -14,4 +14,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(Main);
+)(Portfolio)

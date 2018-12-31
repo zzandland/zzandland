@@ -1,5 +1,5 @@
 import React from 'react';
-import SkillBlock from './ResumeSkillBlock.jsx';
+import Skill from './SkillSubComponents/Skill.jsx';
 
 export default ({ skills, className, changeActiveItem }) => (
   <div className={className} onClick={() => changeActiveItem('skill') }>
@@ -11,12 +11,12 @@ export default ({ skills, className, changeActiveItem }) => (
         <div className="row">
           <div className="col s6">
             {skills.slice(0, Math.ceil(skills.length / 2)).map(skill => (
-              <SkillBlock skill={skill} />
+              <Skill skill={skill} />
             ))}
           </div>
           <div className="col s6">
             {skills.slice(Math.ceil(skills.length / 2)).map(skill => (
-              <SkillBlock skill={skill} />
+              <Skill skill={skill} />
             ))}
           </div>
         </div>

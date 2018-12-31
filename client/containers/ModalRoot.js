@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import ModalRoot from '../components/ModalRoot';
-import { hideModal } from '../actions';
+import { showModal, hideModal } from '../actions';
 
 const mapStateToProps = (state) => ({
   ...state.Modal
@@ -8,6 +8,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = dispatch => ({
   hideModal: () => dispatch(hideModal()), 
+  closeDetailsModal: () => dispatch(showModal('portfolio', { open: true })),
 })
 
 export default connect (

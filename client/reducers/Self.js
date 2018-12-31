@@ -61,7 +61,17 @@ const initialState = {
       proficiency: 3.5,
     },
  ],
-  portfolio: [],
+  portfolios: [
+    { title: 'WeTube',
+      client: 'Personal Project',
+      startDate: '12/03/2018',
+      usedTech: 'Socket.io, React, Redux, Node.js',
+      images: [
+        'http://via.placeholder.com/535x400',
+      ],
+      link: 'https://www.wetube.cloud',
+    },
+  ],
 };
 
 export default (state = initialState, action) => {

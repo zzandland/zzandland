@@ -1,5 +1,5 @@
 import React from 'react';
-import ExperienceBlock from './ResumeExperienceBlock.jsx';
+import Experience from './ExperienceSubComponents/Experience.jsx';
 
 export default ({ experiences, className, changeActiveItem }) => (
   <div className={className} onClick={() => changeActiveItem('experience')}>
@@ -9,7 +9,7 @@ export default ({ experiences, className, changeActiveItem }) => (
     <div className="resume-card-body experience">
       <div className="resume-card-body-container second-font">
         {experiences.map(experience => (
-          <ExperienceBlock experience={experience} />
+          <Experience experience={experience} />
         ))}
       </div>
     </div>

@@ -1,7 +1,7 @@
 import React from 'react';
-import PortfolioRows from './PortfolioRows';
+import Portfolio from '../../containers/Modals/PortfolioSubComponents/Portfolio';
 
-export default ({ closeModal }) => (
+export default ({ closeModal, portfolios }) => (
   <section className="bl-expand bl-expand-top">
     <div className="container page-title center-align">
       <h2 className="center-align">
@@ -14,7 +14,9 @@ export default ({ closeModal }) => (
       <span className="fa fa-suitcase" aria-hidden="true"></span>
       <span className="outer-line"></span>
     </div>
-    <PortfolioRows />
+    <div className="row center-align da-thumbs" id="bl-work-items">
+      {portfolios.map(portfolio => <Portfolio portfolio={portfolio} />)}
+    </div>
     <img onClick={closeModal} alt="close" src="images/close-button.png" className="bl-icon-close" />
   </section>
 )

@@ -1,6 +1,6 @@
 import React from 'react';
-import ContactsInfo from './ContactsInfo';
-import ContactsForm from './ContactsForm';
+import Info from './ContactsSubComponents/Info';
+import Form from './ContactsSubComponents/Form';
 
 export default ({ closeModal }) => (
   <section className="bl-expand bl-expand-top">
@@ -18,8 +18,8 @@ export default ({ closeModal }) => (
             <span className="outer-line"></span>
         </div>
         <div className="row contact section-padding">
-          <ContactsInfo />
-          <ContactsForm />
+          <Info />
+          <Form />
         </div>
       </div>
     </div>

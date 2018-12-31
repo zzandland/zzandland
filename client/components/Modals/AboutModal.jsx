@@ -1,6 +1,6 @@
 import React from 'react';
 import Info from './AboutSubComponents/Info';
-import Resume from '../../containers/AboutResume';
+import Resume from '../../containers/Modals/AboutSubComponents/Resume';
 import FunFacts from './AboutSubComponents/FunFacts';
 
 export default ({ closeModal }) => (

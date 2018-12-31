@@ -1,8 +1,8 @@
 import React from 'react';
 import Media from 'react-media';
-import ResumeExperience from '../../../containers/AboutResumeExperience';
-import ResumeEducation from '../../../containers/AboutResumeEducation';
-import ResumeSkill from '../../../containers/AboutResumeSkill';
+import Experiences from '../../../containers/Modals/AboutSubComponents/ResumeSubComponents/Experiences';
+import Educations from '../../../containers/Modals/AboutSubComponents/ResumeSubComponents/Educations';
+import Skills from '../../../containers/Modals/AboutSubComponents/ResumeSubComponents/Skills';
 
 export default ({ activeMenu, changeActiveItem }) => {
   let selective = {
@@ -46,15 +46,15 @@ export default ({ activeMenu, changeActiveItem }) => {
               {matches => 
                 matches ? (
                   <div className="resume-cards">
-                    <ResumeExperience className="resume-card resume-card-0" />
-                    <ResumeEducation className="resume-card resume-card-1" />
-                    <ResumeSkill className="resume-card resume-card-2" />
+                    <Experiences className="resume-card resume-card-0" />
+                    <Educations className="resume-card resume-card-1" />
+                    <Skills className="resume-card resume-card-2" />
                   </div>
                 ) : (
                   <div className="resume-cards">
-                    <ResumeExperience className={selective.experience} />
-                    <ResumeEducation className={selective.education} />
-                    <ResumeSkill className={selective.skill} />
+                    <Experiences className={selective.experience} />
+                    <Educations className={selective.education} />
+                    <Skills className={selective.skill} />
                   </div>
                 )  
               }

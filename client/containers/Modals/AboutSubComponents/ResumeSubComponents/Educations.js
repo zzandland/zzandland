@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import { changeActiveItem } from '../actions';
-import ResumeEducation from '../components/Modals/AboutSubComponents/ResumeEducation';
+import { changeActiveItem } from '../../../../actions';
+import Educations from '../../../../components/Modals/AboutSubComponents/ResumeSubComponents/Educations';
 
 const mapStateToProps = ({ Self }) => ({
   educations: Self.educations,
@@ -13,4 +13,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(ResumeEducation)
+)(Educations)

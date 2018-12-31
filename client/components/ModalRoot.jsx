@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import Modal from 'react-modal';
 import AboutModal from './Modals/AboutModal';
-import PortfolioModal from './Modals/PortfolioModal';
+import PortfolioModal from '../containers/Modals/PortfolioModal';
 import ContactsModal from './Modals/ContactsModal';
+import DetailsModal from './Modals/PortfolioSubComponents/DetailsModal';
 
 class ModalRoot extends Component {
   constructor(props) {
@@ -21,9 +22,13 @@ class ModalRoot extends Component {
   }
 
   closeModal() {
-    const { hideModal } = this.props;
-    hideModal();
-    this.setState({ modalIsOpen: false });
+    const { hideModal, closeDetailsModal, modalType } = this.props;
+    if (modalType === 'details') {
+      closeDetailsModal();
+    } else {
+      hideModal();
+      this.setState({ modalIsOpen: false });
+    }
   }
 
   render() {
@@ -34,11 +39,16 @@ class ModalRoot extends Component {
     } else {
       let SpecificModal;
       if (modalType === 'about') {
-        SpecificModal = <AboutModal closeModal={() => { this.closeModal() }}/>;
+        SpecificModal = <AboutModal closeModal={() => this.closeModal()} />;
       } else if (modalType === 'portfolio') {
-        SpecificModal = <PortfolioModal closeModal={() => { this.closeModal() }}/>;
+        SpecificModal = <PortfolioModal closeModal={() => this.closeModal()} />;
       } else if (modalType === 'contacts') {
-        SpecificModal = <ContactsModal closeModal={() => { this.closeModal() }}/>;
+        SpecificModal = <ContactsModal closeModal={() => this.closeModal()} />;
+      } else if (modalType === 'details') {
+        SpecificModal = (<DetailsModal 
+          project={modalProps} 
+          closeModal={() => this.closeModal()}
+        />);
       }
       return (
         <div>

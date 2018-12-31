@@ -666,6 +666,8 @@ section.bl-expand .bl-icon-close {
   padding: 50px 0;
   border-top: 1px solid #efe9e9;
   border-bottom: 1px solid #efe9e9;
+  height: 700px;
+  display: flex;
 }
 
 .resume-cards {
@@ -844,7 +846,8 @@ span.separator {
 }
 
 .resume-list {
-  width: 100%;
+  width: 46%;
+  margin: auto;
 }
 
 .resume-list-item {
@@ -893,7 +896,7 @@ span.separator {
   padding-right: 13px;
 }
 
-@media (max-width: 1115px) and (min-width:993px) {
+@media (max-width: 1140px) and (min-width:993px) {
   .resume-list-item-title {
     font-size: 0.9rem;
   }
@@ -949,6 +952,7 @@ span.separator {
   position: absolute;
   width: 100%;
   height: 100%;
+  top: 0px;
 }
 
 #bl-work-items>div a div span {
@@ -1047,6 +1051,10 @@ div.bl-panel-items>div {
   transform: translateY(0);
   transition: transform 0.5s ease-in-out, opacity 0s linear 0.5s;
   -ms-transform: translateY(0);
+}
+
+div.bl-panel-items i {
+  width: 28px;
 }
 
 div.bl-panel-items nav {
@@ -1869,6 +1877,10 @@ body.blog .pagination li a i {
 
   .personal-info a.btn.btn-blog {
     margin-top: 24px;
+  }
+  
+  .resume-container {
+    height: auto;
   }
 
   .resume-card.back .resume-card-name,

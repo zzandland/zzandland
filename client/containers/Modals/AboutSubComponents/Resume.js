@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import { changeActiveItem } from '../actions';
-import Resume from '../components/Modals/AboutSubComponents/Resume';
+import { changeActiveItem } from '../../../actions';
+import Resume from '../../../components/Modals/AboutSubComponents/Resume';
 
 const mapStateToProps = ({ Rendering }) => ({
   activeMenu: Rendering.resumeActiveMenu,

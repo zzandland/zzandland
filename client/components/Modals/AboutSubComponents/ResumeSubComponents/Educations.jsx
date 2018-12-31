@@ -1,5 +1,5 @@
 import React from 'react';
-import EducationBlock from './ResumeEducationBlock';
+import Education from './EducationSubComponents/Education';
 
 export default ({ educations, className, changeActiveItem }) => (
   <div className={className} onClick={() => changeActiveItem('education')}>
@@ -9,7 +9,7 @@ export default ({ educations, className, changeActiveItem }) => (
 		<div className="resume-card-body education">
 			<div className="resume-card-body-container second-font">
 				{educations.map(education => (
-					<EducationBlock education={education} />
+					<Education education={education} />
 				))}
 			</div>
 		</div>
