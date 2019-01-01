@@ -23,6 +23,6 @@ export default ({ closeModal }) => (
         </div>
       </div>
     </div>
-    <img onClick={closeModal} alt="close" src="images/close-button.png" className="bl-icon-close" />
+    <img onClick={closeModal} alt="close" src="https://s3-us-west-1.amazonaws.com/zzandland.io/close-button.png" className="bl-icon-close" />
   </section>
 )

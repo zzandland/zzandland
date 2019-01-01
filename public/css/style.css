@@ -1408,43 +1408,44 @@ ul.social-intro li a {
 /* Blog Section
 ================================================== */
 
-body.blog .btn.back {
+div.blog .btn.back {
   background: transparent;
   width: 100%;
   transition: .1s;
+  padding-right: 24px;
 }
 
-body.blog .btn.back:hover {
+div.blog .btn.back:hover {
   color: #fff;
 }
 
-body.blog {
+div.blog {
   background-color: #fff;
 }
 
-body.blog .container.page-title {
+div.blog .container.page-title {
   margin-top: 80px;
 }
 
-body.blog .container.page-title h2 {
+div.blog .container.page-title h2 {
   font-size: 55px;
 }
 
 /*** Posts ***/
 
-body.blog article {
+div.blog article {
   margin-bottom: 60px;
 }
 
-body.blog figure {
+div.blog figure {
   margin: 0;
 }
 
-body.blog figure a img {
+div.blog figure a img {
   width: 100%;
 }
 
-body.blog article h4 {
+div.blog article h4 {
   color: #666;
   text-transform: uppercase;
   font-weight: 600;
@@ -1452,18 +1453,18 @@ body.blog article h4 {
   margin: 0 0 24px;
 }
 
-body.blog .readmore.btn {
+div.blog .readmore.btn {
   height: 42px;
   line-height: 42px;
   font-size: 15px;
   margin-bottom: 25px;
 }
 
-body.blog p {
+div.blog p {
   line-height: 2;
 }
 
-body.blog .meta {
+div.blog .meta {
   clear: both;
   padding: 15px 0;
   width: 100%;
@@ -1472,22 +1473,22 @@ body.blog .meta {
   font-size: 14px;
 }
 
-body.blog .meta span {
+div.blog .meta span {
   margin-right: 15px;
   display: inline-block;
 }
 
-body.blog .meta i {
+div.blog .meta i {
 	padding-right:6px;
 }
 
 /* Pagination */
 
-body.blog .pagination {
+div.blog .pagination {
   margin-bottom: 60px;
 }
 
-body.blog .pagination li {
+div.blog .pagination li {
   border-radius: 50%;
   width: 32px;
   height: 32px;
@@ -1495,19 +1496,19 @@ body.blog .pagination li {
   transition: .1s;
 }
 
-body.blog .pagination li:hover {
+div.blog .pagination li:hover {
   background: #f2f2f2;
 }
 
-body.blog .pagination li.active a {
+div.blog .pagination li.active a {
   color: #fff;
 }
 
-body.blog .pagination li a {
+div.blog .pagination li a {
   color: #656c6d;
 }
 
-body.blog .pagination li a i {
+div.blog .pagination li a i {
   font-size: 20px;
 }
 
@@ -1940,7 +1941,7 @@ body.blog .pagination li a i {
     padding-bottom: 24px;
   }
 
-  body.blog .container.page-title h2 {
+  div.blog .container.page-title h2 {
     font-size: 35px;
   }
   .section-padding.section-padding-right-none {
@@ -2060,7 +2061,7 @@ body.blog .pagination li a i {
 	margin-bottom: 30px;
   }
 
-  body.blog article h4 {
+  div.blog article h4 {
     font-size: 20px;
   }
 
@@ -2072,13 +2073,13 @@ body.blog .pagination li a i {
     border-left: 0;
   }
 
-  body.blog .btn.back {
+  div.blog .btn.back {
     width: 100%;
     border-left: 0;
     margin-bottom: -6px;
   }
 
-  body.blog article {
+  div.blog article {
     margin-bottom: 45px;
   }
 
@@ -2185,15 +2186,15 @@ body.blog .pagination li a i {
 .badges h3 span,
 .bl-main>section.bl-expand .contact .leftside h6,
 .bl-main>section.bl-expand .contact .rightside .input-field .prefix.active,
-body.blog .meta i,
-body.blog .meta a,
+div.blog .meta i,
+div.blog .meta a,
 .widget.recent-posts .entry-title a:hover,
 .sidebar ul.nav-tabs li.active a, 
 .sidebar ul.nav-tabs li:hover a,
-body.blog .btn.back-homepage,
-body.blog article h4:hover,
+div.blog .btn.back-homepage,
+div.blog article h4:hover,
 .comments-list .comment-reply:hover,
-body.blog .btn.back,
+div.blog .btn.back,
 .personal-info a.btn.btn-blog,
 div.bl-panel-items nav span.bl-previous-work,
 div.bl-panel-items nav span.bl-next-work,
@@ -2202,7 +2203,7 @@ div.bl-panel-items nav span.bl-icon-close {
 }
 
 .readmore.btn,
-body.blog .btn.back-homepage:hover,
+div.blog .btn.back-homepage:hover,
 .personal-info a.btn,
 span.separator,
 .resume-list-item-inner,
@@ -2211,19 +2212,19 @@ span.separator,
 div.bl-panel-items a.btn,
 .bl-main>section.bl-expand .contact .rightside form button,
 .widget-tags ul > li a:hover,
-body.blog .pagination li.active,
+div.blog .pagination li.active,
 .comments-form button,
 .comments-form button:hover,
 .comments-form button:focus,
 .comments-form button:active,
-body.blog .btn.back:hover,
+div.blog .btn.back:hover,
 .personal-info a.btn.btn-blog:hover  {
 	background: #72b626;
 }
 .resume-card-name {
 	color: #72b626 !important;
 }
-body.blog .btn.back ,
+div.blog .btn.back ,
 .personal-info a.btn.btn-blog {
 	border:1px solid #72b626;
 }

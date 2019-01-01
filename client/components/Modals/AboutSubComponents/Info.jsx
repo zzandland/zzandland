@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default props => (
   <div className="container infos">
@@ -15,7 +16,7 @@ export default props => (
         <h6 className="uppercase"><i className="fa fa-user"></i> Personal Info</h6>
         <div className="col m12 l12 xl9 p-none">
           <p className="second-font">I'm a Full-stack Software Engineer based in San Francisco, California.<br />
-            I am passionate about web-related technology and enjoy building web applications. 
+            I am passionate about building web applications with central focus on improving user experience. 
           </p>
         </div>
         <div className="col s12 m12 l6 p-none">
@@ -43,9 +44,9 @@ export default props => (
         >
     Download Resume <i className="far fa-file-pdf"></i>
         </a>
-        <a href="blog-light.html" className="btn btn-blog font-weight-700">
+        <Link to="/blog/" className="btn btn-blog font-weight-700">
         My Blog <i className="fa fa-edit"></i>
-        </a>
+        </Link>
       </div>
     </div>
   </div>

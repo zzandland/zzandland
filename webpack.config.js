@@ -1,6 +1,6 @@
 const path = require('path');
 
-module.exports = {
+const clientConfig = {
   mode: 'development',
   entry: [path.join(__dirname, '/client/index.jsx')],
   output: {
@@ -21,3 +21,30 @@ module.exports = {
     ],
   },
 };
+
+const serverConfig = {
+  target: 'node',
+  node: {
+    __dirname: false,
+    __filename: false,
+  },
+  entry: [path.join(__dirname, '/server/index.js')],
+  output: {
+    filename: 'bundle.js',
+    path: path.join(__dirname, '/server'),
+  },
+  resolve: {
+    extensions: ['.jsx', '.js'],
+  },
+  module: {
+    rules: [
+      {
+        test: /\.jsx?/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+      },
+    ],
+  },
+};
+
+module.exports = [clientConfig, serverConfig];

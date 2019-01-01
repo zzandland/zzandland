@@ -17,6 +17,6 @@ export default ({ closeModal, portfolios }) => (
     <div className="row center-align da-thumbs" id="bl-work-items">
       {portfolios.map(portfolio => <Portfolio portfolio={portfolio} />)}
     </div>
-    <img onClick={closeModal} alt="close" src="images/close-button.png" className="bl-icon-close" />
+    <img onClick={closeModal} alt="close" src="https://s3-us-west-1.amazonaws.com/zzandland.io/close-button.png" className="bl-icon-close" />
   </section>
 )
