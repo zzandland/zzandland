@@ -46,6 +46,7 @@ const renderFullPage = (html, preloadedState) => {
         <meta charset="utf-8" />
         <title>Fly</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="google-site-verification" content="Lk-ST82MGvO7Oa7Ii2z8Vn49lWPvfNBCpZjWXaM4_8w" />
         <link rel="preload" href="https://fonts.googleapis.com/css?family=Lato:400,700,900" as="style" onload="this.rel='stylesheet'">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
         <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" as="style" onload="this.rel='stylesheet'">
