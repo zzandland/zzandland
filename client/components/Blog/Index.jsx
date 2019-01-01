@@ -19,7 +19,7 @@ class Blog extends Component {
         <div class="wrapper">
           <div class="container page-title center-align">
             <h2 class="center-align">
-              <span>My </span>
+              <span class="span-spacing span-heading">My </span>
               <span>blog</span>
             </h2>
           </div>

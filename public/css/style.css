@@ -209,6 +209,10 @@ span.Cursor {
   margin-right: 5px;
 }
 
+.span-heading {
+  margin-right: 13px;
+}
+
 .main-picture {
   background-image: url("https://s3-us-west-1.amazonaws.com/zzandland.io/portrait.jpeg");
   padding: 0;
