@@ -1,6 +1,6 @@
 import React from 'react';
-import { initializeBlog } from '../actions';
-import Wrapper from '../components/Wrapper';
+import { initializeBlog, initializeBio } from '../actions';
+import Wrapper from '../containers/Wrapper';
 import Blog from '../containers/Blog/Blog';
 
 const routes = [
@@ -8,6 +8,7 @@ const routes = [
     path: '/',
     exact: true,
     component: Wrapper,
+    getInitialData: (store) => store.dispatch(initializeBio()),
   },
   {
     path: '/blog',

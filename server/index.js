@@ -14,8 +14,6 @@ import App from '../client/components/App';
 import Blog from '../client/components/Blog/Blog';
 import rootReducer from '../client/reducers';
 
-import { getBlogPosts } from '../client/actions';
-
 import routes from '../client/routes';
 import db from '../database';
 
@@ -31,6 +29,13 @@ app.get('/api/blogPosts', (req, res) => {
   })
 });
 
+app.get('/api/selfBio', (req, res) => {
+  db.getSelfBio((err, bio) => {
+    if (err) res.send(err);
+    else res.send(bio);
+  })
+})
+
 const handleRender = (req, store) => {
   const html = renderToString(
     <Provider store={store}>
@@ -44,7 +49,6 @@ const handleRender = (req, store) => {
 
   return renderFullPage(html, preloadedState);
 }
-
 
 const renderFullPage = (html, preloadedState) => {
   return `

@@ -20,15 +20,28 @@ export const changeActiveItem = item => ({
   item,
 });
 
-export const getBlogPosts = (posts) => ({
+const getBlogPosts = (posts) => ({
   type: 'GET_BLOG_POSTS',
   posts,
 });
+
+const updateSelfBio = (bio) => ({
+  type: 'UPDATE_SELF_BIO',
+  bio,
+})
 
 export const initializeBlog = () => {
   return dispatch => {
     return axios.get('/api/blogPosts')
       .then(data => dispatch(getBlogPosts(data.data.rows)))
+      .catch(err => console.log(err))
+  }
+}
+
+export const initializeBio = () => {
+  return dispatch => {
+    return axios.get('/api/selfBio')
+      .then(data => dispatch(updateSelfBio(data.data)))
       .catch(err => console.log(err))
   }
 }

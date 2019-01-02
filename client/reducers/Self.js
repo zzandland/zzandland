@@ -1,81 +1,8 @@
-const initialState = {
-  experiences: [
-    { title: 'Freelance Web Developer',
-      company: '',
-      years: 'Current',
-      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium orci sit amet mi ullamcorper.`,
-    },
-    { title: 'Course Designer & Instructor',
-      company: 'North Toronto High School',
-      years: '2017',
-      description: `Re-designed curriculum to prioritize subjects that are more integral to achieve higher grades. 
-      Provided academic and mental assistance to more than 10 students to enter post-secondary programs that they desired.`,
-    },
-  ],
-  educations: [
-    { institution: 'Hack Reactor',
-      degree: 'Advanced Software Engineering Immersive Program',
-      years: '2018',
-      description: '12 weeks intensive web development program focusing on React and Node.js',
-    },
-    { institution: 'University of Toronto',
-      degree: 'BS in Biology with High Distinction',
-      years: '2012 - 2017',
-      description: 'Graduated with cGPA of 3.8',
-    },
-    { institution: 'Earnest Manning High School',
-      degree: 'Diploma',
-      years: '2009 - 2012',
-      description: '',
-    },
-  ],
-  skills: [
-    { name: 'Javascript',
-      proficiency: 5,
-    },
-    { name: 'React',
-      proficiency: 5,
-    },
-    { name: 'Restful API',
-      proficiency: 4.5,
-    },
-    { name: 'NoSQL',
-      proficiency: 5,
-    },
-    { name: 'AWS',
-      proficiency: 4,
-    },
-    { name: 'Node.js',
-      proficiency: 4.5,
-    },
-    { name: 'Redux',
-      proficiency: 4.5,
-    },
-    { name: 'AJAX',
-      proficiency: 5,
-    },
-    { name: 'SQL',
-      proficiency: 4,
-    },
-    { name: 'HTML/CSS',
-      proficiency: 3.5,
-    },
- ],
-  portfolios: [
-    { title: 'WeTube',
-      client: 'Personal Project',
-      startDate: '12/03/2018',
-      usedTech: 'Socket.io, React, Redux, Node.js',
-      images: [
-        'http://via.placeholder.com/535x400',
-      ],
-      link: 'https://www.wetube.cloud',
-    },
-  ],
-};
-
-export default (state = initialState, action) => {
+export default (state = {}, action) => {
   switch (action.type) {
+    case 'UPDATE_SELF_BIO':
+      return action.bio;
+
     default:
       return state;
   }

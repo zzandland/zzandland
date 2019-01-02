@@ -33,6 +33,7 @@ const serverConfig = {
     filename: 'bundle.js',
     path: path.join(__dirname, '/server'),
   },
+  devtool: 'source-map',
   resolve: {
     extensions: ['.jsx', '.js'],
   },

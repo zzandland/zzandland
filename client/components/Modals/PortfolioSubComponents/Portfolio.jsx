@@ -40,7 +40,7 @@ class Portfolio extends Component {
           onMouseLeave={() => this.mouseOut()}
           onClick={() => this.openDetailsModal()}
         >
-          <img className="responsive-img" src={portfolio.images[0]} alt="Project" />
+          <img className="responsive-img" src={portfolio.images} alt="Project" />
           {isHovered ? 
             <div className="valign-wrapper"><span className="font-weight-700 uppercase">{portfolio.title}</span></div>
           : null

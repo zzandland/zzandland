@@ -4,10 +4,10 @@ import Info from '../../../../components/Modals/PortfolioSubComponents/DetailsSu
 const mapStateToProps = ({ Modal }) => ({
   title: Modal.modalProps.title,
   client: Modal.modalProps.client,
-  startDate: Modal.modalProps.startDate,
-  endDate: Modal.modalProps.endDate,
-  usedTech: Modal.modalProps.usedTech,
-  link: Modal.modalProps.link,
+  startDate: Modal.modalProps.start_date,
+  endDate: Modal.modalProps.end_date,
+  usedTech: Modal.modalProps.used_tech,
+  link: Modal.modalProps.hyper_link,
 });
 
 export default connect(
