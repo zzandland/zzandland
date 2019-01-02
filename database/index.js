@@ -13,16 +13,17 @@ pool.getPosts = (callback) => {
   const query = `
     SELECT
       post.id,
-      post.created_at,
-      post.updated_at,
-      post.image_url,
+      post.created_at, 
+      post.updated_at, 
+      post.image_url, 
+      post.title,
       post.body,
       post.tag,
       "user".id AS user_id,
       "user".first_name,
       "user".last_name,
       "user".email,
-      "user".image_url
+      "user".image_url AS user_image_url
     FROM
       post
     INNER JOIN "user" ON post.author = "user".id;

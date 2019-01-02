@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Content from './Content';
-import Sidebar from './Sidebar';
+import Content from '../../containers/Blog/Content';
+import Sidebar from '../../containers/Blog/Sidebar';
 
 class Blog extends Component {
   constructor(props) {
@@ -16,6 +16,7 @@ class Blog extends Component {
   }
 
   render() {
+    const { posts } = this.props;
     return (
       <div class="blog">
         <div id="loader-wrapper">
