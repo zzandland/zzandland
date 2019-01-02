@@ -8,6 +8,13 @@ class Blog extends Component {
     super(props);
   }
 
+  componentDidMount() {
+    const { posts, initializeBlog } = this.props;
+    if (posts.length === 0) {
+      initializeBlog();
+    }
+  }
+
   render() {
     return (
       <div class="blog">
@@ -15,7 +22,7 @@ class Blog extends Component {
           <div id="loader"></div>
             <div class="loader-section section-left"></div>
             <div class="loader-section section-right"></div>
-        </div>
+          </div>
         <div class="wrapper">
           <div class="container page-title center-align">
             <h2 class="center-align">
@@ -31,7 +38,7 @@ class Blog extends Component {
           <div class="container">
             <div class="row">
               <Content />
-                <Sidebar />
+              <Sidebar />
             </div>
           </div>
         </div>

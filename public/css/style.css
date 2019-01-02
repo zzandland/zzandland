@@ -1699,6 +1699,7 @@ div.blog .pagination li a i {
   border-bottom: 1px solid #ddd;
   padding-bottom: 15px;
   margin-bottom: 17px;
+  display: flex;
 }
 
 .widget.recent-posts ul li:last-child {
@@ -1779,6 +1780,10 @@ div.blog .pagination li a i {
   padding: 5px 15px;
   font-weight: 600;
   transition: 0.1s;
+}
+
+.widget-tags ul > li {
+  display: flex;
 }
 
 .widget-tags ul > li a:hover {
@@ -1926,6 +1931,10 @@ div.blog .pagination li a i {
   .resume-list-item-inner {
     padding-top: 23px !important;
     padding: 20px !important;
+  }
+
+  .widget.recent-posts ul li {
+    flex-direction: column;
   }
 }
 

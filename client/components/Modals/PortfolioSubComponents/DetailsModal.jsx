@@ -16,7 +16,7 @@ export default ({ project, closeModal }) => {
         <img
           onClick={() => closeModal()}
           alt="close" 
-          src="images/close-button.png" 
+          src="https://s3-us-west-1.amazonaws.com/zzandland.io/close-button.png"
           className="control-button bl-icon-close" 
         />
         <span className="control-button bl-next-work"><i className="fas fa-angle-right"></i></span>

@@ -1,29 +1,37 @@
 import path from 'path';
+import generateId from 'crypto-random-string';
 
 import express from 'express';
 import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { matchPath, StaticRouter } from 'react-router-dom';
 
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
 
 import App from '../client/components/App';
-import Blog from '../client/components/Blog/Index';
+import Blog from '../client/components/Blog/Blog';
 import rootReducer from '../client/reducers';
 
+import { getBlogPosts } from '../client/actions';
+
 import routes from '../client/routes';
+import db from '../database';
 
 const app = express();
 const PORT = 80;
 
 app.use('/static', express.static(path.resolve(__dirname + '../../public')));
 
-const handleRender = (req, res) => {
-  const store = createStore(rootReducer);
+app.get('/api/blogPosts', (req, res) => {
+  db.getPosts((err, posts) => {
+    if (err) res.send(err);
+    else res.send(posts);
+  })
+});
 
-  const activeRoute = routes.find(route => matchPath(req.url, route)) || {}
-
+const handleRender = (req, store) => {
   const html = renderToString(
     <Provider store={store}>
       <StaticRouter location={req.url} context={{}}>
@@ -34,7 +42,7 @@ const handleRender = (req, res) => {
 
   const preloadedState = store.getState();
 
-  res.send(renderFullPage(html, preloadedState));
+  return renderFullPage(html, preloadedState);
 }
 
 
@@ -47,6 +55,7 @@ const renderFullPage = (html, preloadedState) => {
         <title>Fly</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="google-site-verification" content="Lk-ST82MGvO7Oa7Ii2z8Vn49lWPvfNBCpZjWXaM4_8w" />
+        <meta name="theme-color" content="#72b626"/>
         <link rel="preload" href="https://fonts.googleapis.com/css?family=Lato:400,700,900" as="style" onload="this.rel='stylesheet'">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
         <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" as="style" onload="this.rel='stylesheet'">
@@ -70,7 +79,21 @@ const renderFullPage = (html, preloadedState) => {
   ` 
 }
 
-app.use(handleRender);
+app.use((req, res) => {
+  const store = createStore(
+    rootReducer,
+    applyMiddleware(thunk),
+  );
+
+  const activeRoute = routes.find(route => matchPath(req.url, route)) || {}
+
+  if (activeRoute.getInitialData) {
+    activeRoute.getInitialData(store)
+      .then(() => res.send(handleRender(req, store)));
+  } else {
+    res.send(handleRender(req, store));
+  }
+});
 
 app.listen(80, () => {
   console.log(`server initiated at: ${PORT}`);

@@ -9,6 +9,7 @@ export default (props) => (
                       <img class="responsive-img" src="http://via.placeholder.com/748x364" alt="" />
                     </a>
                   </figure>
+                      <span class="permalink"><i class="fa fa-link"></i> <a href="blog-post-light.html">permalink</a></span>
                   <div class="blog-excerpt">
                     <p class="second-font">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit massa vel mauris Lorem ipsum dolor sit amet Lorem ipsum dol sit amet Lorem ipsum dol or sit amet, consectetur adipiscing elit. Sed blandit massa vel mauris Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit massa vel mauris ...</p>
                     <a href="blog-post-light.html" class="col s12 m4 l4 xl4 waves-effect waves-light btn readmore font-weight-700">
@@ -17,9 +18,8 @@ export default (props) => (
                     <div class="meta second-font">
                       <span><i class="fa fa-user"></i> <a href="#">admin</a></span>
                       <span class="date"><i class="fa fa-calendar"></i> 9 January 2017</span>
-                      <span><i class="fa fa-commenting"></i> <a href="blog-post-light.html">18</a></span>
+                      <span><i class="fas fa-comments"></i> <a href="blog-post-light.html">18</a></span>
                       <span><i class="fa fa-tags"></i> js, php, html</span>
-                      <span class="permalink"><i class="fa fa-link"></i> <a href="blog-post-light.html">permalink</a></span>
                     </div>
                   </div>
                 </article>

@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default (props) => (
               <div class="sidebar col s12 m4 l4 xl4">
                 <div class="row">
                   <div class="col s12 m12 l12 xl12">
-                    <a href="index-light.html" class="btn back"><i class="fa fa-home"></i> home</a>
+                    <Link to="/" class="btn back"><i class="fa fa-home"></i> home</Link>
                   </div>
                 </div>
                 <div class="widget widget-search">
