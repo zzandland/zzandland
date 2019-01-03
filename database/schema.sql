@@ -20,7 +20,7 @@ CREATE TABLE IF NOT EXISTS blog_post(
   author INTEGER REFERENCES blog_user(id),
   image_url TEXT NULL,
   body TEXT NOT NULL,
-  tag VARCHAR(100)
+  tag VARCHAR(100)[]
 );
 
 CREATE TABLE IF NOT EXISTS blog_comment(
@@ -29,8 +29,7 @@ CREATE TABLE IF NOT EXISTS blog_comment(
   updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
   body TEXT NOT NULL,
   author INTEGER REFERENCES blog_user(id),
-  post INTEGER REFERENCES blog_post(id),
-  nested INTEGER REFERENCES blog_comment(id)
+  post INTEGER REFERENCES blog_post(id)
 );
 
 CREATE TABLE IF NOT EXISTS self_experience(

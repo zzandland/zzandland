@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Route, Link } from 'react-router-dom';
 import Content from '../../containers/Blog/Content';
-import Post from './Post';
+import Post from '../../containers/Blog/Post';
 import Sidebar from '../../containers/Blog/Sidebar';
 
 class Blog extends Component {

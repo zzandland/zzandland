@@ -29,6 +29,13 @@ app.get('/api/blogPosts', (req, res) => {
   })
 });
 
+app.get('/api/:postId/comments', (req, res) => {
+  db.getComments(req.params.postId, (err, comments) => {
+    if (err) res.send(err);
+    else res.send(comments);
+  })
+});
+
 app.get('/api/selfBio', (req, res) => {
   db.getSelfBio((err, bio) => {
     if (err) res.send(err);

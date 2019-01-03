@@ -1554,6 +1554,11 @@ div.blog .pagination li a i {
   margin-left: 110px;
 }
 
+.comments-list .comment-body .comment-meta {
+  display: flex;
+  justify-content: space-between;
+}
+
 .comments-list .comment-author {
   font-weight: 500;
   font-size: 14px;

@@ -18,7 +18,7 @@ export default ({ post }) => (
       <div class="meta second-font">
         <span><i class="fa fa-user"></i> <Link to="/">{`${post.first_name} ${post.last_name}`}</Link></span>
         <span class="date"><i class="fa fa-calendar"></i>{moment(post.created_at).format('D MMMM YYYY')}</span>
-        <span><i class="fas fa-comments"></i> <a href="blog-post-light.html">18</a></span>
+        <span><i class="fas fa-comments"></i><a href="blog-post-light.html">{post.comments}</a></span>
         <span><i class="fa fa-tags"></i>{post.tag.toString()}</span>
       </div>
     </div>

@@ -25,6 +25,11 @@ const getBlogPosts = (posts) => ({
   posts,
 });
 
+const getBlogComments = comments => ({
+  type: 'GET_BLOG_COMMENTS',
+  comments,
+})
+
 const updateSelfBio = (bio) => ({
   type: 'UPDATE_SELF_BIO',
   bio,
@@ -33,7 +38,7 @@ const updateSelfBio = (bio) => ({
 export const initializeBlog = () => {
   return dispatch => {
     return axios.get('/api/blogPosts')
-      .then(data => dispatch(getBlogPosts(data.data.rows)))
+      .then(data => dispatch(getBlogPosts(data.data)))
       .catch(err => console.log(err))
   }
 }
@@ -42,6 +47,14 @@ export const initializeBio = () => {
   return dispatch => {
     return axios.get('/api/selfBio')
       .then(data => dispatch(updateSelfBio(data.data)))
+      .catch(err => console.log(err))
+  }
+}
+
+export const getComments = (postId) => {
+  return dispatch => {
+    return axios.get(`/api/${postId}/comments`)
+      .then(data => dispatch(getBlogComments(data.data)))
       .catch(err => console.log(err))
   }
 }
