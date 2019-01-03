@@ -1432,6 +1432,7 @@ div.blog .container.page-title {
 }
 
 div.blog .container.page-title h2 {
+  display: inline;
   font-size: 55px;
 }
 
@@ -1542,6 +1543,7 @@ div.blog .pagination li a i {
 }
 
 .comments-list img.comment-avatar {
+  position: absolute;
   width: 82px;
   height: 82px;
   border-radius: 100%;
