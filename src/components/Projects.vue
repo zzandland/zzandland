@@ -11,6 +11,9 @@
         <b-col>
           <b-card
             title="Sort Visualizer"
+            img-src="../assets/pyqt_sort_preview.gif"
+            img-alt="Sort Visualizer"
+            img-top
           >
             <b-card-text>
               Built using PyQt5, the program visualizes 9 different sorting algorithms.
