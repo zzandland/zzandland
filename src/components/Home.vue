@@ -1,6 +1,9 @@
 <template>
   <div>
-    <b-jumbotron header="si yong kim" header-level="5">
+    <b-jumbotron
+      header="si yong kim"
+      header-level="5"
+    >
       <span>
         The best time to plant a tree is twenty years ago. The second best time is now.
       </span>
