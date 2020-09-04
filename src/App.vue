@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <Navbar/>
-    <img alt="Vue logo" src="./assets/logo.png">
     <router-view></router-view>
   </div>
 </template>
@@ -25,6 +24,5 @@ export default class App extends Vue {}
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  background-color: black;
 }
 </style>
