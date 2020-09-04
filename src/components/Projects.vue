@@ -1,8 +1,9 @@
 <template>
   <div>
     <b-jumbotron
-      header="Projects"
-      lead="Personal projects that I found interesting"
+      header="projects"
+      header-level="5"
+      lead="Here are some projects that I worked on freetime."
     >
     </b-jumbotron>
     <b-container>
