@@ -7,13 +7,10 @@
     />
     <b-container>
       <b-row>
-        <ProjectComponent
+        <Project
           v-for="(project, index) in projects"
           :key="index"
-          :title="project.title"
-          :img-url="project.imgUrl"
-          :description="project.description"
-          :gh-url="project.ghUrl"
+          :project="project"
         />
       </b-row>
     </b-container>
@@ -22,15 +19,15 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import ProjectComponent from './Project.vue';
-import { Project } from '../type';
+import Project from './Project.vue';
+import { Project as ProjectType } from '../type';
 import { projects } from '../data';
 
 @Component({
-  components: { ProjectComponent },
+  components: { Project },
 })
 export default class Projects extends Vue {
-  projects: Project[] = projects;
+  projects: ProjectType[] = projects;
 }
 
 </script>
