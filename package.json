@@ -9,15 +9,16 @@
     "deploy": "vue-cli-service s3-deploy"
   },
   "dependencies": {
+    "@types/showdown": "^1.9.3",
     "bootstrap": "^4.5.2",
     "bootstrap-vue": "^2.16.0",
     "core-js": "^3.6.5",
+    "showdown": "^1.9.1",
     "vue": "^2.6.12",
     "vue-class-component": "^7.2.3",
     "vue-cli-plugin-s3-deploy": "^4.0.0-rc4",
     "vue-property-decorator": "^8.4.2",
     "vue-router": "^3.4.3",
-    "vue-showdown": "^2.4.1",
     "webpack": "^4.44.1"
   },
   "devDependencies": {
