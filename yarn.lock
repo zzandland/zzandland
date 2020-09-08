@@ -8154,7 +8154,7 @@ shell-quote@^1.6.1:
   resolved "https://registry.yarnpkg.com/shell-quote/-/shell-quote-1.7.2.tgz#67a7d02c76c9da24f99d20808fcaded0e0e04be2"
   integrity sha512-mRz/m/JVscCrkMyPqHc/bczi3OQHkLTqXHEFu0zDhK/qfv3UcOA4SVmRCLmos4bhjr9ekVQubj/R7waKapmiQg==
 
-showdown@^1.9.1:
+showdown@^1.9.0:
   version "1.9.1"
   resolved "https://registry.yarnpkg.com/showdown/-/showdown-1.9.1.tgz#134e148e75cd4623e09c21b0511977d79b5ad0ef"
   integrity sha512-9cGuS382HcvExtf5AHk7Cb4pAeQQ+h0eTr33V1mu+crYWV4KvWAw6el92bDrqGEk5d46Ai/fhbEUwqJ/mTCNEA==
@@ -9308,6 +9308,13 @@ vue-router@^3.4.3:
   version "3.4.3"
   resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-3.4.3.tgz#fa93768616ee338aa174f160ac965167fa572ffa"
   integrity sha512-BADg1mjGWX18Dpmy6bOGzGNnk7B/ZA0RxuA6qedY/YJwirMfKXIDzcccmHbQI0A6k5PzMdMloc0ElHfyOoX35A==
+
+vue-showdown@^2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/vue-showdown/-/vue-showdown-2.4.1.tgz#7cd94597dc1f9ae1286f8a8aab04abfa69b522aa"
+  integrity sha512-bjIadKGnP6XrX41gWL/lKl+7D3t22XXAIPZji/wt0sK32hEK/ejALfN1BSRWcs7oEe+EFOsJG9KRoC+B5HDmnQ==
+  dependencies:
+    showdown "^1.9.0"
 
 vue-style-loader@^4.1.0, vue-style-loader@^4.1.2:
   version "4.1.2"
