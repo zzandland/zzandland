@@ -3,7 +3,7 @@
     <b-jumbotron
       header="projects"
       header-level="5"
-      lead="Here are some projects that I worked on freetime."
+      lead="Here are some projects that I worked on free time."
     />
     <b-container>
       <b-row
@@ -27,13 +27,13 @@
 import { Component, Vue } from 'vue-property-decorator';
 import Project from './Project.vue';
 import { Project as ProjectType } from '../type';
-import data from '../project-data';
+import { projects } from '../data';
 
 @Component({
   components: { Project },
 })
 export default class Projects extends Vue {
-  projectRows: ProjectType[][] = data.reduce((rows, project, index) => {
+  projectRows: ProjectType[][] = projects.reduce((rows, project, index) => {
     if (index % 3 === 0) {
       rows.push([project]);
     } else {
@@ -43,3 +43,11 @@ export default class Projects extends Vue {
   }, [] as ProjectType[][]);
 }
 </script>
+
+<style scoped>
+.lead {
+  margin-top: 2rem;
+  color: rgb(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+}
+</style>

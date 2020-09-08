@@ -1,4 +1,6 @@
-export default [
+import { Project } from './type';
+
+export const projects: Project[] = [
   {
     title: 'Sort Visualizer',
     imgUrl: 'https://s3-us-west-1.amazonaws.com/zzandland.io/assets/previews/pyqt_sort_preview.gif',
@@ -6,3 +8,5 @@ export default [
     ghUrl: 'https://github.com/zzandland/pyqt-sort',
   },
 ];
+
+export const articles: any[] = [];
