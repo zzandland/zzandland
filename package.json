@@ -1,43 +1,47 @@
 {
-  "name": "portfolio",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "zzandland",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack -w",
-    "start": "node server/bundle.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@babel/core": "^7.2.2",
-    "@babel/preset-env": "^7.2.3",
-    "@babel/preset-react": "^7.0.0",
-    "babel-loader": "^8.0.4",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
-    "react-modal": "^3.8.1",
-    "react-redux": "^6.0.0",
-    "react-router-dom": "^4.3.1",
-    "react-typist": "^2.0.4",
-    "react-typist-loop": "0.0.5",
-    "redux": "^4.0.1",
-    "webpack": "^4.28.2",
-    "webpack-cli": "^3.1.2"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "deploy": "vue-cli-service s3-deploy"
   },
   "dependencies": {
-    "@babel/plugin-proposal-class-properties": "^7.2.3",
-    "@babel/register": "^7.0.0",
-    "axios": "^0.18.0",
-    "crypto-random-string": "^1.0.0",
-    "express": "^4.16.4",
-    "moment": "^2.23.0",
-    "pg": "^7.7.1",
-    "pg-native": "^3.0.0",
-    "react-media": "^1.9.2",
-    "react-router": "^4.3.1",
-    "redux-thunk": "^2.3.0"
+    "bootstrap": "^4.5.2",
+    "bootstrap-vue": "^2.16.0",
+    "core-js": "^3.6.5",
+    "vue": "^2.6.12",
+    "vue-class-component": "^7.2.3",
+    "vue-cli-plugin-s3-deploy": "^4.0.0-rc4",
+    "vue-property-decorator": "^8.4.2",
+    "vue-router": "^3.4.3",
+    "webpack": "^4.44.1"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.33.0",
+    "@typescript-eslint/parser": "^2.33.0",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-typescript": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/eslint-config-airbnb": "^5.0.2",
+    "@vue/eslint-config-typescript": "^5.0.2",
+    "eslint": "^7.8.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-vue": "^7.0.0-beta.3",
+    "lint-staged": "^9.5.0",
+    "typescript": "~3.9.3",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,vue,ts,tsx}": [
+      "vue-cli-service lint",
+      "git add"
+    ]
   }
 }
