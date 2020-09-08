@@ -6,12 +6,18 @@
       lead="Here are some projects that I worked on freetime."
     />
     <b-container>
-      <b-row>
-        <Project
-          v-for="(project, index) in projects"
+      <b-row
+        v-for="(row, index) in projectRows"
+        :key="index"
+      >
+        <b-col
+          v-for="(project, index) in row"
           :key="index"
           :project="project"
-        />
+          md="4"
+        >
+          <Project :project="project" />
+        </b-col>
       </b-row>
     </b-container>
   </div>
@@ -21,13 +27,19 @@
 import { Component, Vue } from 'vue-property-decorator';
 import Project from './Project.vue';
 import { Project as ProjectType } from '../type';
-import { projects } from '../data';
+import data from '../project-data';
 
 @Component({
   components: { Project },
 })
 export default class Projects extends Vue {
-  projects: ProjectType[] = projects;
+  projectRows: ProjectType[][] = data.reduce((rows, project, index) => {
+    if (index % 3 === 0) {
+      rows.push([project]);
+    } else {
+      rows[rows.length - 1].push(project);
+    }
+    return rows;
+  }, [] as ProjectType[][]);
 }
-
 </script>
