@@ -5,15 +5,14 @@
       header-level="5"
       lead="The best time to plant a tree is twenty years ago. The second best time is now."
     />
-    <b-container />
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Component, Vue } from 'vue-property-decorator';
 
 @Component
-export default class Home extends Vue {}
+export default class Articles extends Vue {}
 </script>
 
 <style scoped>

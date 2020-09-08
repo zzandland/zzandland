@@ -7,12 +7,12 @@
     />
     <b-container>
       <b-row
-        v-for="(row, index) in projectRows"
-        :key="index"
+        v-for="(row, index1) in projectRows"
+        :key="index1"
       >
         <b-col
-          v-for="(project, index) in row"
-          :key="index"
+          v-for="(project, index2) in row"
+          :key="index2"
           :project="project"
           md="4"
         >
