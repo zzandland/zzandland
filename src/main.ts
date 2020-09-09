@@ -17,7 +17,7 @@ const routes: RouteConfig[] = [
   { path: '/projects', component: Projects, name: 'Projects' },
 ];
 
-const router = new VueRouter({ routes });
+const router = new VueRouter({ mode: 'history', routes });
 
 new Vue({
   render: (h) => h(App),
