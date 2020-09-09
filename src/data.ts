@@ -23,7 +23,7 @@ export const path2html: { [path: string]: string } = {};
     title,
     path,
     date: '09-07-2020',
-    text: stripped.slice(index + 1, 200),
+    text: `${stripped.slice(index + 1, 200)}...`,
   });
 
   path2html[path] = html;

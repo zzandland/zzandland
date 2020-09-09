@@ -20,9 +20,11 @@
             class="my-3"
             :title="article.title"
             :sub-title="article.date"
-            @click="changeRoute(article.path)"
           >
             <b-card-text>{{ article.text }} </b-card-text>
+            <b-link @click="changeRoute(article.path)">
+              Read More
+            </b-link>
           </b-card>
         </b-col>
       </b-row>

@@ -1,5 +1,5 @@
 <template>
-  <b-container class="m-5">
+  <b-container class="mx-auto my-5">
     <span v-html="html" />
   </b-container>
 </template>
@@ -15,3 +15,21 @@ export default class Article extends Vue {
   html: string = path2html[this.title];
 }
 </script>
+
+<style>
+@media (max-width: 576px) {
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+h2 {
+  margin-top: 5rem;
+}
+
+hr {
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+  background: dimgrey;
+}
+</style>
