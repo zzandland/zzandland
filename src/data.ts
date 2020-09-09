@@ -10,14 +10,21 @@ export const projects: Project[] = [
   },
 ];
 
-export const articles: Article[] = [Sep7].map((html: string) => {
+export const articles: Article[] = [];
+
+export const path2html: { [path: string]: string } = {};
+
+[Sep7].forEach((html: string) => {
   const stripped: string = striptags(html);
   const index: number = stripped.indexOf('\n');
   const title: string = stripped.slice(0, index);
-  return {
+  const path: string = title.replaceAll(' ', '-').toLowerCase();
+  articles.push({
     title,
+    path,
     date: '09-07-2020',
     text: stripped.slice(index + 1, 200),
-    path: title.replaceAll(' ', '-').toLowerCase(),
-  };
+  });
+
+  path2html[path] = html;
 });

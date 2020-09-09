@@ -20,9 +20,9 @@
             class="my-3"
             :title="article.title"
             :sub-title="article.date"
+            @click="changeRoute(article.path)"
           >
             <b-card-text>{{ article.text }} </b-card-text>
-            <b-card-text>{{ article.path }} </b-card-text>
           </b-card>
         </b-col>
       </b-row>
@@ -44,6 +44,10 @@ export default class Articles extends Vue {
     }
     return rows;
   }, [] as Article[][]);
+
+  changeRoute(path: string) {
+    this.$router.push({ path: `/articles/${path}` });
+  }
 }
 </script>
 
