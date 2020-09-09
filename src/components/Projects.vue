@@ -16,7 +16,7 @@
           :project="project"
           md="4"
         >
-          <Project :project="project" />
+          <ProjectComponent :project="project" />
         </b-col>
       </b-row>
     </b-container>
@@ -25,22 +25,21 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import Project from './Project.vue';
-import { Project as ProjectType } from '../type';
+import ProjectComponent from './Project.vue';
 import { projects } from '../data';
 
 @Component({
-  components: { Project },
+  components: { ProjectComponent },
 })
 export default class Projects extends Vue {
-  projectRows: ProjectType[][] = projects.reduce((rows, project, index) => {
+  projectRows: Project[][] = projects.reduce((rows, project, index) => {
     if (index % 3 === 0) {
       rows.push([project]);
     } else {
       rows[rows.length - 1].push(project);
     }
     return rows;
-  }, [] as ProjectType[][]);
+  }, [] as Project[][]);
 }
 </script>
 

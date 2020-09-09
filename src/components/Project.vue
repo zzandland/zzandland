@@ -19,11 +19,10 @@
 
 <script lang="ts">
 import { Component, Vue, Prop } from 'vue-property-decorator';
-import { Project as ProjectType } from '../type';
 
 @Component
 export default class Project extends Vue {
-  @Prop() readonly project!: ProjectType;
+  @Prop() readonly project!: Project;
 }
 </script>
 
