@@ -1,4 +1,5 @@
-import { Project } from './type';
+import striptags from 'striptags';
+import Sep7 from './assets/articles/2020-09-07.md';
 
 export const projects: Project[] = [
   {
@@ -9,4 +10,14 @@ export const projects: Project[] = [
   },
 ];
 
-export const articles: any[] = [];
+export const articles: Article[] = [Sep7].map((html: string) => {
+  const stripped: string = striptags(html);
+  const index: number = stripped.indexOf('\n');
+  const title: string = stripped.slice(0, index);
+  return {
+    title,
+    date: '09-07-2020',
+    text: stripped.slice(index + 1, 200),
+    path: title.replaceAll(' ', '-').toLowerCase(),
+  };
+});
