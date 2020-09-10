@@ -41,7 +41,8 @@ export default class Article extends Vue {
   }
 
   .article >>> blockquote {
-    margin-left: 1rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
     border-left: 3px solid #ff9900;
     padding-left: 1rem;
   }
