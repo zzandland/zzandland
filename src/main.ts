@@ -16,7 +16,6 @@ Vue.use(VueRouter);
 const routes: RouteConfig[] = [
   { path: '/', component: Articles, name: 'Articles' },
   { path: '/projects', component: Projects, name: 'Projects' },
-  { path: '/articles', component: Articles, name: 'Articles' },
   {
     path: '/articles/:title',
     component: ArticleComponent,
