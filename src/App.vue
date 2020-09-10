@@ -20,15 +20,17 @@ a {
   color: #ff9900;
 }
 
-#app {
-  font-family: "Courier New";
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+a:hover, a:focus {
+  color: #914c03;
 }
 
-.fab {
+i {
   font-size: 1.3rem;
   vertical-align: middle;
+}
+
+#app {
+  font-family: "Courier New";
 }
 
 .lead {

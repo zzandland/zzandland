@@ -1,5 +1,5 @@
 import striptags from 'striptags';
-import Sep7 from './assets/articles/2020-09-07.md';
+import Sep10 from './assets/articles/2020-09-10.md';
 
 export const projects: Project[] = [
   {
@@ -12,9 +12,13 @@ export const projects: Project[] = [
 
 export const articles: Article[] = [];
 
-export const path2html: { [path: string]: string } = {};
+export const path2html: { [path: string]: [string, string] } = {};
 
-[Sep7].forEach((html: string) => {
+const raw: { [name: string]: string } = {
+  '09-10-2020': Sep10,
+};
+
+Object.entries(raw).forEach(([date, html]: [string, string]) => {
   const stripped: string = striptags(html);
   const index: number = stripped.indexOf('\n');
   const title: string = stripped.slice(0, index);
@@ -22,9 +26,9 @@ export const path2html: { [path: string]: string } = {};
   articles.push({
     title,
     path,
-    date: '09-07-2020',
+    date,
     text: `${stripped.slice(index + 1, 200)}...`,
   });
 
-  path2html[path] = html;
+  path2html[path] = [date, html];
 });
