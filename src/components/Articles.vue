@@ -5,7 +5,7 @@
       header-level="5"
       lead="The best time to plant a tree is twenty years ago. The second best time is now."
     />
-    <b-container>
+    <b-container class="text-center">
       <b-row
         v-for="(row, index1) in articleRows"
         :key="index1"
@@ -53,10 +53,5 @@ export default class Articles extends Vue {
 }
 </script>
 
-<style scoped>
-.lead {
-  margin-top: 2rem;
-  color: rgb(255, 255, 255, 0.8);
-  font-size: 0.9rem;
-}
+<style>
 </style>

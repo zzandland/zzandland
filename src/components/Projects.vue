@@ -5,7 +5,7 @@
       header-level="5"
       lead="Here are some projects that I worked on free time."
     />
-    <b-container>
+    <b-container class="text-center">
       <b-row
         v-for="(row, index1) in projectRows"
         :key="index1"
@@ -43,10 +43,5 @@ export default class Projects extends Vue {
 }
 </script>
 
-<style scoped>
-.lead {
-  margin-top: 2rem;
-  color: rgb(255, 255, 255, 0.8);
-  font-size: 0.9rem;
-}
+<style>
 </style>

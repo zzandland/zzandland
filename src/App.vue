@@ -16,13 +16,19 @@ export default class App extends Vue {}
 </script>
 
 <style>
+a {
+  color: #ff9900;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Courier New";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .lead {
+  margin-top: 2rem;
+  color: rgb(255, 255, 255, 0.8);
   font-size: 1rem;
 }
 </style>

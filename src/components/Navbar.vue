@@ -12,7 +12,7 @@
       id="nav-collapse"
       is-nav
     >
-      <b-navbar-nav>
+      <b-navbar-nav class="text-center">
         <b-nav-item to="/projects">
           projects
         </b-nav-item>
@@ -62,5 +62,9 @@ export default class Navbar extends Vue {}
 <style scoped>
 .navbar {
   background: rgb(255, 255, 255, 0.5)
+}
+
+.nav-item {
+  font-size: 1rem;
 }
 </style>
