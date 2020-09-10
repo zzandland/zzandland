@@ -26,6 +26,11 @@ a {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.fab {
+  font-size: 1.3rem;
+  vertical-align: middle;
+}
+
 .lead {
   margin-top: 2rem;
   color: rgb(255, 255, 255, 0.8);

@@ -12,7 +12,7 @@
       target="_blank"
       variant="primary"
     >
-      <i class="fab fa-github" /> View source code
+      <i class="fab fa-github" /> View code
     </b-button>
   </b-card>
 </template>
@@ -29,6 +29,6 @@ export default class Project extends Vue {
 <style scoped>
 img {
   height: 12rem;
-  object-fit: contain;
+  object-fit: cover;
 };
 </style>
