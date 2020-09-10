@@ -9,7 +9,7 @@ declare type Project = {
 
 declare type Article = {
   title: string;
+  subtitle: string;
   date: string;
-  text: string;
   path: string;
 }

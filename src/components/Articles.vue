@@ -19,12 +19,14 @@
           <b-card
             class="my-3"
             :title="article.title"
-            :sub-title="article.date"
+            :sub-title="article.subtitle"
           >
-            <b-card-text>{{ article.text }} </b-card-text>
             <b-link @click="changeRoute(article.path)">
               Read More
             </b-link>
+            <template #footer>
+              <small>{{ article.date }}</small>
+            </template>
           </b-card>
         </b-col>
       </b-row>

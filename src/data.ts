@@ -19,15 +19,16 @@ const raw: { [name: string]: string } = {
 };
 
 Object.entries(raw).forEach(([date, html]: [string, string]) => {
-  const stripped: string = striptags(html);
-  const index: number = stripped.indexOf('\n');
-  const title: string = stripped.slice(0, index);
+  const titleIndex: number = html.indexOf('</h1>');
+  const subtitleIndex: number = html.indexOf('<hr>');
+  const title: string = striptags(html.slice(0, titleIndex));
+  const subtitle: string = striptags(html.slice(titleIndex + 5, subtitleIndex));
   const path: string = title.replaceAll(' ', '-').toLowerCase();
   articles.push({
     title,
+    subtitle,
     path,
     date,
-    text: `${stripped.slice(index + 1, 200)}...`,
   });
 
   path2html[path] = [date, html];

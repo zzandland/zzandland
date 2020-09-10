@@ -31,6 +31,16 @@ export default class Article extends Vue {
 </script>
 
 <style scoped>
+  @media (max-width: 768px) {
+    .article >>> h1 {
+      font-size: 2rem;
+    }
+
+    .article >>> h2 {
+      font-size: 1.5rem !important;
+    }
+  }
+
   @media (min-width: 768px) {
     .container {
       width: 65%;
@@ -46,9 +56,14 @@ export default class Article extends Vue {
     margin-bottom: 3rem;
   }
 
-  .article >>> h2, .article >>> h3 {
+  .article >>> h1, .article >>> h3 {
     padding-top: 3rem;
     margin-bottom: 1.5rem;
+  }
+
+  .article >>> h2 {
+    font-size: 1.7rem;
+    color: grey;
   }
 
   .article >>> p {
