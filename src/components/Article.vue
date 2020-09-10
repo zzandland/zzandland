@@ -16,20 +16,5 @@ export default class Article extends Vue {
 }
 </script>
 
-<style>
-@media (max-width: 576px) {
-  h2 {
-    font-size: 2rem;
-  }
-}
-
-h2 {
-  margin-top: 5rem;
-}
-
-hr {
-  margin-top: 5rem;
-  margin-bottom: 3rem;
-  background: dimgrey;
-}
+<style module src="../assets/styles/retro.css">
 </style>
