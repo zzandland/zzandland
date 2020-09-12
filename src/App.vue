@@ -24,6 +24,10 @@ a:hover, a:focus {
   color: #914c03;
 }
 
+body {
+  min-height: 100vh;
+}
+
 i {
   font-size: 1.3rem;
   vertical-align: middle;
