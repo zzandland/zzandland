@@ -3,9 +3,9 @@ import Sep10 from './assets/articles/2020-09-10.md';
 
 export const projects: Project[] = [
   {
-    title: 'Sort Visualizer',
+    title: 'pyqt-sort',
     imgUrl: 'https://s3-us-west-1.amazonaws.com/zzandland.io/assets/previews/pyqt_sort_preview.gif',
-    description: 'Built using PyQt5, the program visualizes 9 different sorting algorithms.',
+    description: 'Built using PyQt5, the program visualizes 10 sorting algorithms.',
     ghUrl: 'https://github.com/zzandland/pyqt-sort',
   },
 ];

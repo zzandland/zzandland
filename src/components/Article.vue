@@ -47,6 +47,10 @@ export default class Article extends Vue {
     }
   }
 
+  .btn {
+    color: rgb(211, 211, 211);
+  }
+
   span {
     color: lightgrey;
   }
@@ -60,7 +64,7 @@ export default class Article extends Vue {
 
   .article >>> blockquote p {
     font-size: 0.9rem;
-    color: lightgrey;
+    color: darkgrey;
   }
 
   .article >>> hr {
