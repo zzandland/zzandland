@@ -36,7 +36,8 @@
     "eslint-plugin-vue": "^7.0.0-beta.3",
     "lint-staged": "^9.5.0",
     "typescript": "~3.9.3",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "vuex": "^3.5.1"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"
