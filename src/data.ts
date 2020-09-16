@@ -1,5 +1,6 @@
 import striptags from 'striptags';
 import Sep10 from './assets/articles/2020-09-10.md';
+import Sep15 from './assets/articles/2020-09-15.md';
 
 export const projects: Project[] = [
   {
@@ -16,6 +17,7 @@ export const path2html: { [path: string]: [string, string] } = {};
 
 const raw: { [name: string]: string } = {
   '09-10-2020': Sep10,
+  '09-15-2020': Sep15,
 };
 
 Object.entries(raw).forEach(([date, html]: [string, string]) => {

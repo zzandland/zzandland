@@ -17,7 +17,7 @@
           md="4"
         >
           <b-card
-            class="my-3"
+            class="my-3 h-100"
             :title="article.title"
             :sub-title="article.subtitle"
             :img-src="'https://s3-us-west-1.amazonaws.com/zzandland.io/assets/previews/' + article.date +'.jpg'"
@@ -60,5 +60,11 @@ export default class Articles extends Vue {
 img {
   height: 12rem;
   object-fit: cover;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 </style>

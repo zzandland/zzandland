@@ -58,21 +58,23 @@ export default class Article extends Vue {
   .article >>> blockquote {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
-    border-left: 3px solid #ff9900;
+    border-left: 2px solid #ff9900;
     padding-left: 1rem;
+    font-size: 0.9rem !important;
+    color: darkgrey !important;
   }
 
   .article >>> blockquote p {
-    font-size: 0.9rem;
-    color: darkgrey;
+    font-size: 0.9rem !important;
   }
 
   .article >>> hr {
     background-color: #ff9900;
     margin-bottom: 3rem;
+    height: 1px;
   }
 
-  .article >>> h1, .article >>> h3 {
+  .article >>> h1, .article >>> h3, .article >>> h4 {
     padding-top: 3rem;
     margin-bottom: 1.5rem;
   }
@@ -91,5 +93,9 @@ export default class Article extends Vue {
   .article >>> p {
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
+  }
+
+  .article >>> ul {
+    padding-left: 2rem;
   }
 </style>
