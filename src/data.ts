@@ -7,9 +7,9 @@ export const projects: Project[] = [
   },
 ];
 
-const gdUrl = 'https://docs.google.com/uc?export=download&id=';
+const url = 'https://s3-us-west-1.amazonaws.com/zzandland.io/assets/articles/';
 
 export const articles: { [date: string]: string } = {
-  '09-10-2020': `${gdUrl}1JKTi6QFR11TebqC_uzLpWW5_UBO7xu8f`,
-  '09-15-2020': `${gdUrl}1g9bFe4JTgkwV6J__cdr-0TIPluTVRIMP`,
+  '09-10-2020': `${url}2020-09-10.md`,
+  '09-15-2020': `${url}2020-09-15.md`,
 };
