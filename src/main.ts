@@ -8,6 +8,7 @@ import App from './App.vue';
 import Articles from './components/Articles.vue';
 import ArticleComponent from './components/Article.vue';
 import Projects from './components/Projects.vue';
+import store from './store';
 
 Vue.config.productionTip = false;
 Vue.use(BootstrapVue);
@@ -17,16 +18,17 @@ const routes: RouteConfig[] = [
   { path: '/', component: Articles, name: 'Articles' },
   { path: '/projects', component: Projects, name: 'Projects' },
   {
-    path: '/articles/:title',
+    path: '/articles/:path',
     component: ArticleComponent,
     name: 'Article',
-    props: (route) => ({ title: route.params.title }),
+    props: (route) => ({ path: route.params.path }),
   },
 ];
 
 const router = new VueRouter({ mode: 'history', routes });
 
 new Vue({
-  render: (h) => h(App),
   router,
+  store,
+  render: (h) => h(App),
 }).$mount('#app');

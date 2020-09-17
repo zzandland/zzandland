@@ -18,15 +18,22 @@
 
 <script lang="ts">
 import { Component, Vue, Prop } from 'vue-property-decorator';
-import { path2html } from '../data';
 
 @Component
 export default class Article extends Vue {
-  @Prop() readonly title!: string;
+  @Prop() readonly path!: string;
 
-  date: string = path2html[this.title][0];
+  date = '';
 
-  html: string = path2html[this.title][1];
+  html = '';
+
+  async created() {
+    if (!this.$store.getters.articles.length) await this.$store.dispatch('fetchHtmls');
+
+    const { date, html } = this.$store.getters.html(this.path);
+    this.date = date;
+    this.html = html;
+  }
 }
 </script>
 

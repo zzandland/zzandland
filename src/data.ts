@@ -1,7 +1,3 @@
-import striptags from 'striptags';
-import Sep10 from './assets/articles/2020-09-10.md';
-import Sep15 from './assets/articles/2020-09-15.md';
-
 export const projects: Project[] = [
   {
     title: 'pyqt-sort',
@@ -11,27 +7,9 @@ export const projects: Project[] = [
   },
 ];
 
-export const articles: Article[] = [];
+const gdUrl = 'https://docs.google.com/uc?export=download&id=';
 
-export const path2html: { [path: string]: [string, string] } = {};
-
-const raw: { [name: string]: string } = {
-  '09-10-2020': Sep10,
-  '09-15-2020': Sep15,
+export const articles: { [date: string]: string } = {
+  '09-10-2020': `${gdUrl}1JKTi6QFR11TebqC_uzLpWW5_UBO7xu8f`,
+  '09-15-2020': `${gdUrl}1g9bFe4JTgkwV6J__cdr-0TIPluTVRIMP`,
 };
-
-Object.entries(raw).forEach(([date, html]: [string, string]) => {
-  const titleIndex: number = html.indexOf('</h1>');
-  const subtitleIndex: number = html.indexOf('<hr>');
-  const title: string = striptags(html.slice(0, titleIndex));
-  const subtitle: string = striptags(html.slice(titleIndex + 5, subtitleIndex));
-  const path: string = title.replaceAll(' ', '-').toLowerCase();
-  articles.push({
-    title,
-    subtitle,
-    path,
-    date,
-  });
-
-  path2html[path] = [date, html];
-});

@@ -11,5 +11,6 @@ declare type Article = {
   title: string;
   subtitle: string;
   date: string;
+  html: string;
   path: string;
 }

@@ -37,18 +37,24 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import { articles } from '../data';
 
 @Component
 export default class Articles extends Vue {
-  articleRows: Article[][] = articles.reduce((rows, article, index) => {
-    if (index % 3 === 0) {
-      rows.push([article]);
-    } else {
-      rows[rows.length - 1].push(article);
-    }
-    return rows;
-  }, [] as Article[][]);
+  articleRows = Array<Array<Article>>(Array<Article>());
+
+  async created() {
+    if (!this.$store.getters.articles.length) await this.$store.dispatch('fetchHtmls');
+    const { articles }: { articles: [Article] } = this.$store.getters;
+
+    this.articleRows = articles.reduce((rows, article, index) => {
+      if (index % 3 === 0) {
+        rows.push([article]);
+      } else {
+        rows[rows.length - 1].push(article);
+      }
+      return rows;
+    }, [] as Article[][]);
+  }
 
   changeRoute(path: string) {
     this.$router.push({ path: `/articles/${path}` });
