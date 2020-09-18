@@ -1,11 +1,18 @@
 <template>
-  <b-navbar toggleable="lg">
+  <b-navbar
+    toggleable="lg"
+    class="py-0"
+  >
     <b-navbar-brand
       to="/"
       type="dark"
       class="mx-4"
     >
-      zzandland
+      <img
+        class="brand"
+        src="https://s3-us-west-1.amazonaws.com/zzandland.io/assets/logo.png"
+        alt="zzandland"
+      >
     </b-navbar-brand>
     <b-navbar-toggle target="nav-collapse" />
     <b-collapse
@@ -60,8 +67,18 @@ export default class Navbar extends Vue {}
 </script>
 
 <style scoped>
+@media (max-width: 992px) {
+  .navbar-brand {
+    margin-left: 0 !important;
+  }
+}
+
 .navbar {
   background: rgb(255, 255, 255, 0.5)
+}
+
+.navbar-brand img {
+  height: 3rem;
 }
 
 .nav-item {
