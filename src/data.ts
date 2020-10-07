@@ -10,6 +10,7 @@ export const projects: Project[] = [
 const url = 'https://s3-us-west-1.amazonaws.com/zzandland.io/assets/articles/';
 
 export const articles: { [date: string]: string } = {
-  '09-10-2020': `${url}2020-09-10.md`,
+  '10-07-2020': `${url}2020-10-07.md`,
   '09-15-2020': `${url}2020-09-15.md`,
+  '09-10-2020': `${url}2020-09-10.md`,
 };
