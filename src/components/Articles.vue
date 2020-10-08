@@ -13,11 +13,12 @@
         <b-col
           v-for="(article, index2) in row"
           :key="index2"
+          class="my-3"
           :article="article"
           md="4"
         >
           <b-card
-            class="my-3 h-100"
+            class="h-100"
             :title="article.title"
             :sub-title="article.subtitle"
             :img-src="'https://s3-us-west-1.amazonaws.com/zzandland.io/assets/previews/' + article.date +'.jpg'"

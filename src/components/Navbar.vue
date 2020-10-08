@@ -1,6 +1,6 @@
 <template>
   <b-navbar
-    toggleable="lg"
+    toggleable="sm"
     class="py-0"
   >
     <b-navbar-brand
