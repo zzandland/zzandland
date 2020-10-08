@@ -5,6 +5,23 @@ import Vuex from 'vuex';
 import { articles } from './data';
 
 Vue.use(Vuex);
+const converter = new Converter();
+
+const processMd = (date: string, md: string) => {
+  const html = converter.makeHtml(md);
+  const titleIndex: number = html.indexOf('</h1>');
+  const subtitleIndex: number = html.indexOf('<hr>');
+  const title: string = striptags(html.slice(0, titleIndex));
+  const path: string = title.replaceAll(' ', '-').toLowerCase();
+
+  return [path, {
+    title,
+    date,
+    html,
+    path,
+    subtitle: striptags(html.slice(titleIndex + 5, subtitleIndex)),
+  }] as [string, Article];
+};
 
 export default new Vuex.Store({
   state: {
@@ -24,28 +41,20 @@ export default new Vuex.Store({
 
   actions: {
     async fetchHtmls({ commit }) {
-      const converter = new Converter();
-      const tmp = await Promise.all(
-        Object.entries(articles).map(async ([date, url]: [string, string]) => {
-          const res = await fetch(url, {
-            headers: { 'Access-Control-Allow-Origin': '*' },
-          });
-          const md = await res.text();
-          const html = converter.makeHtml(md);
-          const titleIndex: number = html.indexOf('</h1>');
-          const subtitleIndex: number = html.indexOf('<hr>');
-          const title: string = striptags(html.slice(0, titleIndex));
-          const path: string = title.replaceAll(' ', '-').toLowerCase();
-
-          return [path, {
-            title,
-            date,
-            html,
-            path,
-            subtitle: striptags(html.slice(titleIndex + 5, subtitleIndex)),
-          }] as [string, Article];
-        }),
-      );
+      const tmp = process.env.NODE_ENV === 'production'
+        ? await Promise.all(
+          Object.entries(articles).map(async ([date, url]: [string, string]) => {
+            const res = await fetch(url, {
+              headers: { 'Access-Control-Allow-Origin': '*' },
+            });
+            const md = await res.text();
+            return processMd(date, md);
+          }),
+        )
+        : Object.entries(articles).map(([date, url]: [string, string]) => {
+          const md = require(`./${url}`);
+          return processMd(date, md);
+        });
 
       const res: { [path: string]: Article } = {};
 

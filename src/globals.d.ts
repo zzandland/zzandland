@@ -1,5 +1,3 @@
-declare module '*.md';
-
 declare type Project = {
   title: string;
   imgUrl: string;

@@ -22,4 +22,16 @@ module.exports = {
       uploadConcurrency: 5,
     },
   },
+
+  configureWebpack: {
+    module: {
+      rules: [{
+        test: /\.md$/,
+        loader: 'raw-loader', // npm install -D raw-loader
+        options: {
+          esModule: false,
+        },
+      }],
+    },
+  },
 };

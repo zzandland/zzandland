@@ -38,6 +38,7 @@
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-vue": "^7.0.0-beta.3",
     "lint-staged": "^9.5.0",
+    "raw-loader": "^4.0.1",
     "typescript": "~3.9.3",
     "vue-template-compiler": "^2.6.11"
   },
