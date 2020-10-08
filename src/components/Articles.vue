@@ -21,10 +21,8 @@
             :title="article.title"
             :sub-title="article.subtitle"
             :img-src="'https://s3-us-west-1.amazonaws.com/zzandland.io/assets/previews/' + article.date +'.jpg'"
+            @click="changeRoute(article.path)"
           >
-            <b-link @click="changeRoute(article.path)">
-              Read More
-            </b-link>
             <template #footer>
               <small>{{ article.date }}</small>
             </template>
