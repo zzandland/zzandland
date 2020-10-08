@@ -9,7 +9,6 @@
     "deploy": "vue-cli-service s3-deploy"
   },
   "dependencies": {
-    "@types/showdown": "^1.9.3",
     "bootstrap": "^4.5.2",
     "bootstrap-vue": "^2.16.0",
     "core-js": "^3.6.5",
@@ -26,6 +25,7 @@
     "webpack": "^4.44.1"
   },
   "devDependencies": {
+    "@types/showdown": "^1.9.3",
     "@typescript-eslint/eslint-plugin": "^2.33.0",
     "@typescript-eslint/parser": "^2.33.0",
     "@vue/cli-plugin-babel": "~4.5.0",
