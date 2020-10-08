@@ -15,8 +15,8 @@ module.exports = {
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'import/no-dynamic-require': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'global-require': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    '@typescript-eslint/no-var-requires': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'import/no-dynamic-require': 'off',
+    'global-require': 'off',
+    '@typescript-eslint/no-var-requires': 'off',
   },
 };

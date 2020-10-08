@@ -40,21 +40,11 @@ export default new Vuex.Store({
   },
 
   actions: {
-    async fetchHtmls({ commit }) {
-      const tmp = process.env.NODE_ENV === 'production'
-        ? await Promise.all(
-          Object.entries(articles).map(async ([date, url]: [string, string]) => {
-            const res = await fetch(url, {
-              headers: { 'Access-Control-Allow-Origin': '*' },
-            });
-            const md = await res.text();
-            return processMd(date, md);
-          }),
-        )
-        : Object.entries(articles).map(([date, url]: [string, string]) => {
-          const md = require(`./${url}`);
-          return processMd(date, md);
-        });
+    fetchArticles({ commit }) {
+      const tmp = Object.entries(articles).map(([date, url]: [string, string]) => {
+        const md = require(`./${url}`);
+        return processMd(date, md);
+      });
 
       const res: { [path: string]: Article } = {};
 

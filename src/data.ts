@@ -7,9 +7,7 @@ export const projects: Project[] = [
   },
 ];
 
-const url = window.location.href.includes('localhost')
-  ? 'assets/articles/'
-  : 'https://s3-us-west-1.amazonaws.com/zzandland.io/assets/articles/';
+const url = 'assets/articles/';
 
 export const articles: { [date: string]: string } = {
   '10-08-2020': `${url}2020-10-08.md`,

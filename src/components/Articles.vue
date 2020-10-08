@@ -42,7 +42,7 @@ export default class Articles extends Vue {
   articleRows = Array<Array<Article>>(Array<Article>());
 
   async created() {
-    if (!this.$store.getters.articles.length) await this.$store.dispatch('fetchHtmls');
+    if (!this.$store.getters.articles.length) await this.$store.dispatch('fetchArticles');
     const { articles }: { articles: [Article] } = this.$store.getters;
 
     this.articleRows = articles.reduce((rows, article, index) => {

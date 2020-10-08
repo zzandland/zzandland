@@ -28,7 +28,7 @@ export default class Article extends Vue {
   html = '';
 
   async created() {
-    if (!this.$store.getters.articles.length) await this.$store.dispatch('fetchHtmls');
+    if (!this.$store.getters.articles.length) await this.$store.dispatch('fetchArticles');
 
     const { date, html } = this.$store.getters.html(this.path);
     this.date = date;
