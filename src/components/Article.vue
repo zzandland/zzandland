@@ -97,6 +97,10 @@ export default class Article extends Vue {
     margin-bottom: 2rem;
   }
 
+  .article >>> ol {
+    margin-bottom: 1.5rem;
+  }
+
   .article >>> p {
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
