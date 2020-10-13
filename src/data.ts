@@ -10,7 +10,6 @@ export const projects: Project[] = [
 const url = 'assets/articles/';
 
 export const articles: { [date: string]: string } = {
-  '10-08-2020': `${url}2020-10-08.md`,
   '10-07-2020': `${url}2020-10-07.md`,
   '09-15-2020': `${url}2020-09-15.md`,
   '09-10-2020': `${url}2020-09-10.md`,
