@@ -82,8 +82,12 @@ export default class Article extends Vue {
   }
 
   .article >>> h1, .article >>> h3, .article >>> h4 {
-    padding-top: 3rem;
+    margin-top: 3rem;
     margin-bottom: 1.5rem;
+  }
+
+  .article >>> h1 {
+    font-size: 2.7rem;
   }
 
   .article >>> h2 {

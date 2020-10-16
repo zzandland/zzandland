@@ -6,9 +6,14 @@ import { articles } from './data';
 
 Vue.use(Vuex);
 const converter = new Converter();
+converter.setFlavor('github');
 
 const processMd = (date: string, md: string) => {
-  const html = converter.makeHtml(md);
+  const html = converter.makeHtml(md)
+    .replace(/&amp;/g, '&')
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>');
   const titleIndex: number = html.indexOf('</h1>');
   const subtitleIndex: number = html.indexOf('<hr>');
   const title: string = striptags(html.slice(0, titleIndex));
