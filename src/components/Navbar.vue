@@ -78,10 +78,14 @@ export default class Navbar extends Vue {}
 }
 
 .navbar-brand img {
-  height: 3rem;
+  height: 2.5rem;
 }
 
 .nav-item {
   font-size: 1rem;
+}
+
+.nav-link {
+  font-size: 1.2rem;
 }
 </style>
