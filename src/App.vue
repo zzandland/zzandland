@@ -28,13 +28,17 @@ body {
   min-height: 100vh;
 }
 
+html {
+  font-size: 20px;
+}
+
 i {
   font-size: 1.3rem;
   vertical-align: middle;
 }
 
 #app {
-  font-family: "Courier New";
+  font-family: 'Yeon Sung', cursive;
 }
 
 .lead {
