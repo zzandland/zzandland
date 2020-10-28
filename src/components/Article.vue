@@ -38,28 +38,16 @@ export default class Article extends Vue {
 </script>
 
 <style scoped>
-  @media (max-width: 768px) {
-    .article >>> h1 {
-      font-size: 2rem;
-    }
-
-    .article >>> h2 {
-      font-size: 1.5rem !important;
-    }
-  }
-
-  @media (min-width: 768px) {
-    .container {
-      width: 65%;
-    }
-  }
-
   .btn {
     color: rgb(211, 211, 211);
   }
 
   span {
     color: lightgrey;
+  }
+
+  .article {
+    font-size: 1.1rem;
   }
 
   .article >>> blockquote {
@@ -102,12 +90,31 @@ export default class Article extends Vue {
   }
 
   .article >>> ol, .article >>> ul {
-    font-size: 1.1rem;
     padding-left: 2rem;
   }
 
   .article >>> p {
-    font-size: 1.1rem;
     margin-bottom: 1.5rem;
   }
+
+  @media (max-width: 768px) {
+    .article >>> h1 {
+      font-size: 2rem;
+    }
+
+    .article >>> h2 {
+      font-size: 1.5rem !important;
+    }
+
+    .article >>> ul, .article >>> ul {
+      padding-left: 1rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      width: 65%;
+    }
+  }
+
 </style>
