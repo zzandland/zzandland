@@ -38,7 +38,7 @@ i {
 }
 
 #app {
-  font-family: 'Yeon Sung', cursive;
+  font-family: 'Nanum Gothic', sans-serif;
 }
 
 .lead {

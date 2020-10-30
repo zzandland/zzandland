@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-jumbotron
-      header="si yong kim"
+      header="SI YONG KIM"
       header-level="5"
       lead="The best time to plant a tree is twenty years ago. The second best time is now."
     />
@@ -71,5 +71,17 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.card-title, .card-footer, .display-5 {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.jumbotron {
+  padding: 3rem 2rem;
+}
+
+p.lead {
+  margin-bottom: 0;
 }
 </style>
