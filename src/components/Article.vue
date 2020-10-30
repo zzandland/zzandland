@@ -2,7 +2,7 @@
   <b-container class="mx-auto my-5">
     <div class="d-flex flex-row justify-content-between">
       <b-button
-        to="/"
+        href="javascript:history.back()"
         variant="outline"
       >
         <i class="fas fa-long-arrow-alt-left" /> Go back
@@ -38,8 +38,9 @@ export default class Article extends Vue {
 </script>
 
 <style scoped>
-  .btn {
+  a.btn {
     color: rgb(211, 211, 211);
+    padding: 0;
   }
 
   span {
@@ -75,12 +76,16 @@ export default class Article extends Vue {
   }
 
   .article >>> h1 {
-    font-size: 2.7rem;
+    font-size: 2.3rem;
   }
 
   .article >>> h2 {
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     color: grey;
+  }
+
+  .article >>> h3 {
+    font-size: 1.8rem;
   }
 
   .article >>> h4 {
@@ -121,15 +126,35 @@ export default class Article extends Vue {
   }
 
   @media (max-width: 768px) {
+    div.mx-auto.my-5.container {
+      margin-top: 0;
+    }
+
+    a.btn, span {
+      font-size: 0.8rem;
+    }
+
+    .article {
+      font-size: 0.8rem;
+    }
+
     .article >>> h1 {
-      font-size: 2rem;
+      font-size: 1.8rem;
     }
 
     .article >>> h2 {
-      font-size: 1.5rem !important;
+      font-size: 1.3rem !important;
     }
 
-    .article >>> ul, .article >>> ul {
+    .article >>> h3 {
+      font-size: 1.6rem;
+    }
+
+    .article >>> h4 {
+      font-size: 1.4rem;
+    }
+
+    .article >>> ol, .article >>> ul {
       padding-left: 1rem;
     }
   }
