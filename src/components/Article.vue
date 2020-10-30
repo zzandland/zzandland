@@ -53,7 +53,7 @@ export default class Article extends Vue {
   .article >>> blockquote {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
-    border-left: 2px solid #ff9900;
+    border-left: 3px solid #f36d33;
     padding-left: 1rem;
     font-size: 0.9rem !important;
     color: darkgrey !important;
@@ -64,7 +64,7 @@ export default class Article extends Vue {
   }
 
   .article >>> hr {
-    background-color: #ff9900;
+    background-color: #f36d33;
     margin-bottom: 3rem;
     height: 1px;
   }
@@ -83,6 +83,10 @@ export default class Article extends Vue {
     color: grey;
   }
 
+  .article >>> h4 {
+    font-size: 1.6rem;
+  }
+
   .article >>> img {
     width: 100%;
     height: 100%;
@@ -93,8 +97,27 @@ export default class Article extends Vue {
     padding-left: 2rem;
   }
 
+  .article >>> ol p, .article >>> ul p {
+    margin-bottom: 0;
+  }
+
   .article >>> p {
     margin-bottom: 1.5rem;
+  }
+
+  .article >>> pre {
+    border: 1px solid #2e2e2e;
+    border-left: 3px solid #f36d33;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0 0.5rem 1.6rem 0.5rem;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1em 1.5em;
+    display: block;
+    word-wrap: break-word;
   }
 
   @media (max-width: 768px) {
