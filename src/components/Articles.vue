@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-jumbotron
-      header="SI YONG KIM"
+      header="si yong kim"
       header-level="5"
       lead="The best time to plant a tree is twenty years ago. The second best time is now."
     />
