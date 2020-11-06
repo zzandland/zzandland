@@ -56,12 +56,11 @@ export default class Article extends Vue {
     margin-right: 0.5rem;
     border-left: 3px solid #f36d33;
     padding-left: 1rem;
-    font-size: 0.9rem !important;
     color: darkgrey !important;
   }
 
   .article >>> blockquote p {
-    font-size: 0.9rem !important;
+    font-size: 0.7rem !important;
   }
 
   .article >>> hr {
