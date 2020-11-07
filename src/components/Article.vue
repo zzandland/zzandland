@@ -59,7 +59,7 @@ export default class Article extends Vue {
     color: darkgrey !important;
   }
 
-  .article >>> blockquote p {
+  .article >>> blockquote * {
     font-size: 0.7rem !important;
   }
 
