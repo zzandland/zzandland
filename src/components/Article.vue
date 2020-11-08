@@ -38,12 +38,18 @@ export default class Article extends Vue {
 
   mounted() {
     this.date = '';
-    document.querySelectorAll('pre code').forEach((block) => { hljs.highlightBlock(block); });
+    Article.highlight();
   }
 
   updated() {
     this.date = '';
-    document.querySelectorAll('pre code').forEach((block) => { hljs.highlightBlock(block); });
+    Article.highlight();
+  }
+
+  static highlight() {
+    const blocks: NodeListOf<HTMLElement> = document.querySelectorAll('pre code');
+
+    blocks.forEach((block) => { hljs.highlightBlock(block); });
   }
 }
 </script>
