@@ -113,7 +113,6 @@ export default class Article extends Vue {
     border: 1px solid #2e2e2e;
     border-left: 3px solid #f36d33;
     page-break-inside: avoid;
-    font-family: 'Ubuntu Mono', monospace;
     font-size: 15px;
     line-height: 1.6;
     margin: 0 0.5rem 1.6rem 0.5rem;
@@ -122,6 +121,10 @@ export default class Article extends Vue {
     padding: 1em 1.5em;
     display: block;
     word-wrap: break-word;
+  }
+
+  .article >>> pre code {
+    font-family: 'Ubuntu Mono', monospace;
   }
 
   @media (max-width: 768px) {
