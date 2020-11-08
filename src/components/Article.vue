@@ -18,6 +18,7 @@
 
 <script lang="ts">
 import { Component, Vue, Prop } from 'vue-property-decorator';
+import hljs from 'highlight.js';
 
 @Component
 export default class Article extends Vue {
@@ -33,6 +34,16 @@ export default class Article extends Vue {
     const { date, html } = this.$store.getters.html(this.path);
     this.date = date;
     this.html = html;
+  }
+
+  mounted() {
+    this.date = '';
+    document.querySelectorAll('pre code').forEach((block) => { hljs.highlightBlock(block); });
+  }
+
+  updated() {
+    this.date = '';
+    document.querySelectorAll('pre code').forEach((block) => { hljs.highlightBlock(block); });
   }
 }
 </script>
@@ -110,6 +121,7 @@ export default class Article extends Vue {
   }
 
   .article >>> pre {
+    background-color: #282828;
     border: 1px solid #2e2e2e;
     border-left: 3px solid #f36d33;
     page-break-inside: avoid;
