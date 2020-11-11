@@ -18,5 +18,6 @@ module.exports = {
     'import/no-dynamic-require': 'off',
     'global-require': 'off',
     '@typescript-eslint/no-var-requires': 'off',
+    'class-methods-use-this': 'off',
   },
 };

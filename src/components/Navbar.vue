@@ -33,25 +33,25 @@
             href="https://github.com/zzandland"
             target="_blank"
           >
-            <i class="fab fa-github h4 my-auto" />
+            <i class="fab fa-github" />
           </b-nav-item>
           <b-nav-item
             href="https://www.instagram.com/zzandland/"
             target="_blank"
           >
-            <i class="fab fa-instagram h4 my-auto" />
+            <i class="fab fa-instagram" />
           </b-nav-item>
           <b-nav-item
             href="https://www.youtube.com/user/zzandlnad"
             target="_blank"
           >
-            <i class="fab fa-youtube h4 my-auto" />
+            <i class="fab fa-youtube" />
           </b-nav-item>
           <b-nav-item
-            href="https://medium.com/@zzandland"
+            href="https://www.linkedin.com/in/zzandland/"
             target="_blank"
           >
-            <i class="fab fa-medium h4 my-auto" />
+            <i class="fab fa-linkedin" />
           </b-nav-item>
         </div>
       </b-navbar-nav>
@@ -73,6 +73,19 @@ export default class Navbar extends Vue {}
   }
 }
 
+.nav-item {
+  font-size: 1rem;
+}
+
+.nav-link {
+  font-size: 1.1rem;
+  padding-bottom: 0.7rem;
+}
+
+.nav-link i {
+  font-size: 1.4rem;
+}
+
 .navbar {
   background: rgb(255, 255, 255, 0.5)
 }
@@ -81,11 +94,7 @@ export default class Navbar extends Vue {}
   height: 2.5rem;
 }
 
-.nav-item {
-  font-size: 1rem;
-}
-
-.nav-link {
-  font-size: 1.2rem;
+.navbar-toggler {
+  border: none;
 }
 </style>

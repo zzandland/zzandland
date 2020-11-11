@@ -67,6 +67,10 @@ img {
   object-fit: cover;
 }
 
+.card {
+  cursor: pointer;
+}
+
 .card-body {
   display: flex;
   flex-direction: column;

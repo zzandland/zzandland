@@ -37,12 +37,10 @@ export default class Article extends Vue {
   }
 
   mounted() {
-    this.date = '';
     Article.highlight();
   }
 
   updated() {
-    this.date = '';
     Article.highlight();
   }
 
@@ -77,7 +75,7 @@ export default class Article extends Vue {
   }
 
   .article >>> blockquote * {
-    font-size: 0.7rem !important;
+    font-size: 0.8rem !important;
   }
 
   .article >>> hr {
