@@ -2,7 +2,6 @@ import { Converter } from 'showdown';
 import striptags from 'striptags';
 import Vue from 'vue';
 import Vuex from 'vuex';
-import { articles } from './data';
 
 Vue.use(Vuex);
 const converter = new Converter();
@@ -19,13 +18,13 @@ const processMd = (date: string, md: string) => {
   const title: string = striptags(html.slice(0, titleIndex));
   const path: string = title.replaceAll(' ', '-').toLowerCase();
 
-  return [path, {
+  return {
     title,
     date,
     html,
     path,
     subtitle: striptags(html.slice(titleIndex + 5, subtitleIndex)),
-  }] as [string, Article];
+  } as Article;
 };
 
 export default new Vuex.Store({
@@ -46,15 +45,17 @@ export default new Vuex.Store({
 
   actions: {
     fetchArticles({ commit }) {
-      const tmp = Object.entries(articles).map(([date, url]: [string, string]) => {
-        const md = require(`./${url}`);
-        return processMd(date, md);
-      });
-
-      const res: { [path: string]: Article } = {};
-
-      tmp.forEach(([path, article]) => { res[path] = article; });
-
+      const res = require.context('./assets/articles')
+        .keys()
+        .map((fileName: string) => fileName.replace(/[^-\d]/g, ''))
+        .sort((date1: string, date2: string) => (new Date(date1) < new Date(date2) ? 1 : -1))
+        .reduce((acc, date: string) => {
+          const filePath = `./assets/articles/${date}.md`;
+          const md = require(`${filePath}`);
+          const obj = processMd(date, md);
+          acc[obj.path] = obj;
+          return acc;
+        }, {} as { [path: string]: Article });
       commit('setPath2Article', res);
     },
   },
