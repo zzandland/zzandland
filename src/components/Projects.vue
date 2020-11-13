@@ -26,7 +26,7 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import ProjectComponent from './Project.vue';
-import { projects } from '../data';
+import projects from '../data';
 
 @Component({
   components: { ProjectComponent },

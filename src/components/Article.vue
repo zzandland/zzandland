@@ -2,8 +2,8 @@
   <b-container class="mx-auto my-5">
     <div class="d-flex flex-row justify-content-between">
       <b-button
-        href="javascript:history.back()"
         variant="outline"
+        @click="handleGoBack()"
       >
         <i class="fas fa-long-arrow-alt-left" /> Go back
       </b-button>
@@ -37,17 +37,22 @@ export default class Article extends Vue {
   }
 
   mounted() {
-    Article.highlight();
+    Article.handleHighlight();
   }
 
   updated() {
-    Article.highlight();
+    Article.handleHighlight();
   }
 
-  static highlight() {
+  static handleHighlight() {
     const blocks: NodeListOf<HTMLElement> = document.querySelectorAll('pre code');
 
     blocks.forEach((block) => { hljs.highlightBlock(block); });
+  }
+
+  handleGoBack() {
+    if (window.history.length > 2) window.history.back();
+    else this.$router.push({ path: '/' });
   }
 }
 </script>
