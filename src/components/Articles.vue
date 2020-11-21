@@ -15,7 +15,6 @@
           :key="index2"
           class="my-3"
           :article="article"
-          md="4"
         >
           <b-card
             class="h-100"
@@ -40,14 +39,45 @@ import { Component, Vue } from 'vue-property-decorator';
 
 @Component
 export default class Articles extends Vue {
+  numColumn = 1;
+
+  articles = Array<Article>();
+
   articleRows = Array<Array<Article>>(Array<Article>());
 
   async created() {
+    this.onResize();
+    window.addEventListener('resize', this.onResize);
     if (!this.$store.getters.articles.length) await this.$store.dispatch('fetchArticles');
-    const { articles }: { articles: [Article] } = this.$store.getters;
+    this.articles = this.$store.getters.articles;
+    this.generateRows();
+  }
 
-    this.articleRows = articles.reduce((rows, article, index) => {
-      if (index % 3 === 0) {
+  destroyed() {
+    window.removeEventListener('resize', this.onResize);
+  }
+
+  onResize() {
+    const width = window.innerWidth;
+    let tmp: number;
+
+    if (width < 520) {
+      tmp = 1;
+    } else if (width >= 520 && width < 992) {
+      tmp = 2;
+    } else {
+      tmp = 3;
+    }
+
+    if (tmp !== this.numColumn) {
+      this.numColumn = tmp;
+      this.generateRows();
+    }
+  }
+
+  generateRows() {
+    this.articleRows = this.articles.reduce((rows, article, index) => {
+      if (index % this.numColumn === 0) {
         rows.push([article]);
       } else {
         rows[rows.length - 1].push(article);
