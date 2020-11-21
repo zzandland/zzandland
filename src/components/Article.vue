@@ -1,7 +1,7 @@
 <template>
   <b-container
     fluid="md"
-    class="mx-auto my-5"
+    class="mx-auto px-5 my-5"
   >
     <div class="d-flex flex-row justify-content-between">
       <b-button
