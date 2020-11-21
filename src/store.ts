@@ -49,13 +49,13 @@ export default new Vuex.Store({
         .keys()
         .map((fileName: string) => fileName.replace(/[^-\d]/g, ''))
         .sort((date1: string, date2: string) => (new Date(date1) < new Date(date2) ? 1 : -1))
-        .reduce((acc, date: string) => {
+        .reduce((acc: { [path: string]: Article }, date: string) => {
           const filePath = `./assets/articles/${date}.md`;
           const md = require(`${filePath}`);
           const obj = processMd(date, md);
           acc[obj.path] = obj;
           return acc;
-        }, {} as { [path: string]: Article });
+        }, {});
       commit('setPath2Article', res);
     },
   },

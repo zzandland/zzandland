@@ -9,6 +9,7 @@
     "deploy": "vue-cli-service s3-deploy"
   },
   "dependencies": {
+    "@types/highlightjs": "^10.1.0",
     "bootstrap": "^4.5.2",
     "bootstrap-vue": "^2.16.0",
     "core-js": "^3.6.5",

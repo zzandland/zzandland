@@ -60,7 +60,6 @@ export default class Cards<T> extends Vue {
   cardRows = Array<Array<T>>(Array<T>());
 
   async created() {
-    console.log(this.cardType);
     this.onResize();
     window.addEventListener('resize', this.onResize);
   }

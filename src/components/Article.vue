@@ -21,7 +21,7 @@
 
 <script lang="ts">
 import { Component, Vue, Prop } from 'vue-property-decorator';
-import hljs from 'highlight.js';
+import hljs from '../highlight';
 
 @Component
 export default class Article extends Vue {

@@ -1,18 +1,28 @@
-import { BootstrapVue } from 'bootstrap-vue';
+import {
+  ButtonPlugin,
+  CardPlugin,
+  JumbotronPlugin,
+  LayoutPlugin,
+  NavbarPlugin,
+} from 'bootstrap-vue';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
 import './assets/styles/bootstrap.min.css';
 import Vue from 'vue';
 import VueRouter, { RouteConfig } from 'vue-router';
-import App from './App.vue';
-import Articles from './components/Articles.vue';
-import ArticleComponent from './components/Article.vue';
-import Projects from './components/Projects.vue';
 import store from './store';
 
-Vue.config.productionTip = false;
-Vue.use(BootstrapVue);
+const App = () => import('./App.vue');
+const Articles = () => import('./components/Articles.vue');
+const ArticleComponent = () => import('./components/Article.vue');
+const Projects = () => import('./components/Projects.vue');
+
 Vue.use(VueRouter);
+Vue.use(ButtonPlugin);
+Vue.use(CardPlugin);
+Vue.use(JumbotronPlugin);
+Vue.use(LayoutPlugin);
+Vue.use(NavbarPlugin);
 
 const routes: RouteConfig[] = [
   { path: '/', component: Articles, name: 'Articles' },
