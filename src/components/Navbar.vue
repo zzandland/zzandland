@@ -1,12 +1,12 @@
 <template>
   <b-navbar
-    toggleable="sm"
+    toggleable="md"
     class="py-0"
   >
     <b-navbar-brand
       to="/"
       type="dark"
-      class="mx-4"
+      class="mx-3 pl-1"
     >
       <img
         class="brand"
@@ -28,7 +28,7 @@
         right
         class="ml-auto"
       >
-        <div class="mx-4 d-flex flex-row justify-content-around align-items-center">
+        <div class="mx-3 d-flex flex-row justify-content-around align-items-center">
           <b-nav-item
             href="https://github.com/zzandland"
             target="_blank"
@@ -67,9 +67,9 @@ export default class Navbar extends Vue {}
 </script>
 
 <style scoped>
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .navbar-brand {
-    margin-left: 0 !important;
+    margin-left: 10px !important;
   }
 }
 
@@ -96,5 +96,11 @@ export default class Navbar extends Vue {}
 
 .navbar-toggler {
   border: none;
+}
+
+@media (min-width: 1200px) {
+  .navbar {
+    padding: 0 10% 0 10%;
+  }
 }
 </style>

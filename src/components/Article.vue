@@ -1,5 +1,8 @@
 <template>
-  <b-container class="mx-auto my-5">
+  <b-container
+    fluid="md"
+    class="mx-auto my-5"
+  >
     <div class="d-flex flex-row justify-content-between">
       <b-button
         variant="outline"
@@ -58,6 +61,10 @@ export default class Article extends Vue {
 </script>
 
 <style scoped>
+div.mx-auto.my-5.container-md {
+  max-width: 992px;
+}
+
 a.btn {
   color: rgb(211, 211, 211);
   padding: 0;
@@ -144,7 +151,7 @@ span {
   page-break-inside: avoid;
   font-size: 15px;
   line-height: 1.6;
-  margin: 0 0.5rem 1.6rem 0.5rem;
+  margin: 0 0.5rem ).6rem 0.5rem;
   max-width: 100%;
   overflow: auto;
   padding: 1em 1.5em;
@@ -157,7 +164,7 @@ span {
 }
 
 @media (max-width: 768px) {
-  div.mx-auto.my-5.container {
+  div.mx-auto.my-5.container-md {
     margin-top: 0;
   }
 
@@ -187,12 +194,6 @@ span {
 
   .article >>> ol, .article >>> ul {
     padding-left: 1rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    width: 65%;
   }
 }
 </style>

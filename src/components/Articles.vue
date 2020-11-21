@@ -22,6 +22,7 @@
             :title="article.title"
             :sub-title="article.subtitle"
             :img-src="'https://s3-us-west-1.amazonaws.com/zzandland.io/assets/previews/' + article.date +'.jpg'"
+            :img-alt="article.title"
             @click="changeRoute(article.path)"
           >
             <template #footer>
