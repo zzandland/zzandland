@@ -5,7 +5,10 @@
       header-level="5"
       lead="The best time to plant a tree is twenty years ago. The second best time is now."
     />
-    <div class="text-center mx-3">
+    <div
+      id="cards"
+      class="text-center mx-4"
+    >
       <b-row
         v-for="(row, index1) in articleRows"
         :key="index1"
@@ -61,9 +64,9 @@ export default class Articles extends Vue {
     const width = window.innerWidth;
     let tmp: number;
 
-    if (width < 650) {
+    if (width < 680) {
       tmp = 1;
-    } else if (width >= 650 && width < 992) {
+    } else if (width >= 680 && width < 992) {
       tmp = 2;
     } else {
       tmp = 3;
@@ -98,6 +101,10 @@ img {
   object-fit: cover;
 }
 
+p.lead {
+  margin-bottom: 0;
+}
+
 .card {
   cursor: pointer;
 }
@@ -116,7 +123,10 @@ img {
   padding: 3rem 2rem;
 }
 
-p.lead {
-  margin-bottom: 0;
+@media (min-width: 1150px) {
+  #cards {
+    max-width: 1100px;
+    margin: auto !important;
+  }
 }
 </style>
