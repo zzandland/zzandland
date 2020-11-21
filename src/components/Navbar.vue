@@ -28,7 +28,7 @@
         right
         class="ml-auto"
       >
-        <div class="mx-3 d-flex flex-row justify-content-around align-items-center">
+        <div class="mx-3 mt-1 d-flex flex-row justify-content-around align-items-center">
           <b-nav-item
             href="https://github.com/zzandland"
             target="_blank"
