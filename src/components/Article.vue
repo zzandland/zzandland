@@ -111,6 +111,10 @@ span {
   font-size: 1.6rem;
 }
 
+.article >>> h5 {
+  margin-bottom: 1.3rem;
+}
+
 .article >>> img {
   width: 100%;
   height: 100%;
@@ -118,11 +122,15 @@ span {
 }
 
 .article >>> ol, .article >>> ul {
-  padding-left: 2rem;
+  padding-left: 1.5rem;
 }
 
 .article >>> ol p, .article >>> ul p {
   margin-bottom: 0;
+}
+
+.article >>> li {
+  margin-bottom: 0.5rem;
 }
 
 .article >>> p {
