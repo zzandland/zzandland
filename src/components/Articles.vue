@@ -5,88 +5,42 @@
       header-level="5"
       lead="The best time to plant a tree is twenty years ago. The second best time is now."
     />
-    <div
-      id="cards"
+    <Cards
       class="text-center mx-4"
-    >
-      <b-row
-        v-for="(row, index1) in articleRows"
-        :key="index1"
-      >
-        <b-col
-          v-for="(article, index2) in row"
-          :key="index2"
-          class="my-3"
-          :article="article"
-        >
-          <b-card
-            class="h-100"
-            :title="article.title"
-            :sub-title="article.subtitle"
-            :img-src="'https://s3-us-west-1.amazonaws.com/zzandland.io/assets/previews/' + article.date +'.jpg'"
-            :img-alt="article.title"
-            @click="changeRoute(article.path)"
-          >
-            <template #footer>
-              <small>{{ article.date }}</small>
-            </template>
-          </b-card>
-        </b-col>
-      </b-row>
-    </div>
+      :card-type="type"
+      :cards="articles"
+      :on-click="changeRoute"
+    />
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import { Component, Mixins } from 'vue-property-decorator';
+import { mapGetters, mapActions } from 'vuex';
+import Cards from './Cards.vue';
 
-@Component
-export default class Articles extends Vue {
-  numColumn = 1;
+@Component({
+  components: { Cards },
+  computed: mapGetters([
+    'articles',
+  ]),
+  methods: mapActions([
+    'fetchArticles',
+  ]),
+})
+export default class Articles extends Mixins(Cards) {
+  articles!: Article[]
 
-  articles = Array<Article>();
+  fetchArticles!: () => void
 
-  articleRows = Array<Array<Article>>(Array<Article>());
+  type = 'ARTICLE';
 
   async created() {
-    this.onResize();
-    window.addEventListener('resize', this.onResize);
-    if (!this.$store.getters.articles.length) await this.$store.dispatch('fetchArticles');
-    this.articles = this.$store.getters.articles;
-    this.generateRows();
+    if (!this.articles.length) this.fetchArticles();
   }
 
   destroyed() {
     window.removeEventListener('resize', this.onResize);
-  }
-
-  onResize() {
-    const width = window.innerWidth;
-    let tmp: number;
-
-    if (width < 680) {
-      tmp = 1;
-    } else if (width >= 680 && width < 992) {
-      tmp = 2;
-    } else {
-      tmp = 3;
-    }
-
-    if (tmp !== this.numColumn) {
-      this.numColumn = tmp;
-      this.generateRows();
-    }
-  }
-
-  generateRows() {
-    this.articleRows = this.articles.reduce((rows, article, index) => {
-      if (index % this.numColumn === 0) {
-        rows.push([article]);
-      } else {
-        rows[rows.length - 1].push(article);
-      }
-      return rows;
-    }, [] as Article[][]);
   }
 
   changeRoute(path: string) {
@@ -96,37 +50,11 @@ export default class Articles extends Vue {
 </script>
 
 <style>
-img {
-  height: 12rem;
-  object-fit: cover;
-}
-
 p.lead {
   margin-bottom: 0;
 }
 
-.card {
-  cursor: pointer;
-}
-
-.card-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.card-title, .card-footer, .display-5 {
-  font-family: 'Ubuntu', sans-serif;
-}
-
 .jumbotron {
   padding: 3rem 2rem;
-}
-
-@media (min-width: 1150px) {
-  #cards {
-    max-width: 1100px;
-    margin: auto !important;
-  }
 }
 </style>

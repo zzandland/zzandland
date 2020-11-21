@@ -40,14 +40,14 @@ export default class Article extends Vue {
   }
 
   mounted() {
-    Article.handleHighlight();
+    Article.handleSyntaxHighlight();
   }
 
   updated() {
-    Article.handleHighlight();
+    Article.handleSyntaxHighlight();
   }
 
-  static handleHighlight() {
+  static handleSyntaxHighlight() {
     const blocks: NodeListOf<HTMLElement> = document.querySelectorAll('pre code');
 
     blocks.forEach((block) => { hljs.highlightBlock(block); });

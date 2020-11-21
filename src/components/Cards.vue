@@ -1,0 +1,134 @@
+<template v-if="cardType">
+  <div
+    id="cards"
+    class="text-center mx-4"
+  >
+    <b-row
+      v-for="(row, index1) in cardRows"
+      :key="index1"
+    >
+      <b-col
+        v-for="(card, index2) in row"
+        :key="index2"
+        class="my-3"
+        :card="card"
+      >
+        <b-card
+          v-if="cardType === 'ARTICLE'"
+          class="h-100"
+          :title="card.title"
+          :sub-title="card.subtitle"
+          :img-src="'https://s3-us-west-1.amazonaws.com/zzandland.io/assets/previews/' + card.date +'.jpg'"
+          :img-alt="card.title"
+          @click="onClick(card.path)"
+        >
+          <template #footer>
+            <small>{{ card.date }}</small>
+          </template>
+        </b-card>
+        <b-card
+          v-else-if="cardType === 'PROJECT'"
+          class="my-3"
+          :title="card.title"
+          :img-src="card.imgUrl"
+          :img-alt="card.title"
+          @click="onClick(card.path)"
+        >
+          <b-card-text>{{ card.description }}</b-card-text>
+          <template #footer>
+            <small>View code on <i class="fab fa-github" /></small>
+          </template>
+        </b-card>
+      </b-col>
+    </b-row>
+  </div>
+</template>
+
+<script lang="ts">
+import { Component, Vue, Prop } from 'vue-property-decorator';
+
+@Component
+export default class Cards<T> extends Vue {
+  numColumn = -1;
+
+  @Prop() readonly cards!: T[]
+
+  @Prop() readonly onClick!: Function
+
+  @Prop() readonly cardType!: string
+
+  cardRows = Array<Array<T>>(Array<T>());
+
+  async created() {
+    console.log(this.cardType);
+    this.onResize();
+    window.addEventListener('resize', this.onResize);
+  }
+
+  destroyed() {
+    window.removeEventListener('resize', this.onResize);
+  }
+
+  onResize() {
+    const width = window.innerWidth;
+    let tmp: number;
+
+    if (width < 680) {
+      tmp = 1;
+    } else if (width >= 680 && width < 992) {
+      tmp = 2;
+    } else {
+      tmp = 3;
+    }
+
+    if (tmp !== this.numColumn && this.cards) {
+      this.numColumn = tmp;
+      this.generateRows();
+    }
+  }
+
+  generateRows() {
+    this.cardRows = this.cards.reduce((rows: T[][], card: T, index: number) => {
+      if (index % this.numColumn === 0) {
+        rows.push([card]);
+      } else {
+        rows[rows.length - 1].push(card);
+      }
+      return rows;
+    }, []);
+  }
+}
+</script>
+
+<style>
+i {
+  margin-left: 0.3rem;
+  padding-bottom: 0.2rem;
+}
+
+img {
+  height: 12rem;
+  object-fit: cover;
+}
+
+.card {
+  cursor: pointer;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title, .card-footer, .display-5 {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+@media (min-width: 1150px) {
+  #cards {
+    max-width: 1100px;
+    margin: auto !important;
+  }
+}
+</style>
