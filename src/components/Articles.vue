@@ -5,7 +5,7 @@
       header-level="5"
       lead="The best time to plant a tree is twenty years ago. The second best time is now."
     />
-    <b-container class="text-center">
+    <div class="text-center mx-3">
       <b-row
         v-for="(row, index1) in articleRows"
         :key="index1"
@@ -30,7 +30,7 @@
           </b-card>
         </b-col>
       </b-row>
-    </b-container>
+    </div>
   </div>
 </template>
 
@@ -61,9 +61,9 @@ export default class Articles extends Vue {
     const width = window.innerWidth;
     let tmp: number;
 
-    if (width < 520) {
+    if (width < 650) {
       tmp = 1;
-    } else if (width >= 520 && width < 992) {
+    } else if (width >= 650 && width < 992) {
       tmp = 2;
     } else {
       tmp = 3;
