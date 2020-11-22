@@ -1,11 +1,14 @@
 <template>
   <b-container
+    id="article"
     fluid="md"
-    class="mx-auto px-5 my-5"
+    class="mx-auto my-5"
   >
     <div class="d-flex flex-row justify-content-between">
       <b-button
+        id="go-back"
         variant="outline"
+        class="my-auto"
         @click="handleGoBack()"
       >
         <i class="fas fa-long-arrow-alt-left" /> Go back
@@ -61,15 +64,6 @@ export default class Article extends Vue {
 </script>
 
 <style scoped>
-div.mx-auto.my-5.container-md {
-  max-width: 992px;
-}
-
-a.btn {
-  color: rgb(211, 211, 211);
-  padding: 0;
-}
-
 span {
   color: lightgrey;
 }
@@ -163,13 +157,30 @@ span {
   font-family: 'Ubuntu Mono', monospace;
 }
 
+#article {
+  max-width: 992px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+#go-back {
+  padding: 0;
+}
+
+#go-back i {
+  margin: auto 0.3rem auto 0;
+}
+
+@media (max-width: 600px) {
+  #article {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
 @media (max-width: 768px) {
   div.mx-auto.my-5.container-md {
     margin-top: 0;
-  }
-
-  a.btn, span {
-    font-size: 0.8rem;
   }
 
   .article {
@@ -194,6 +205,10 @@ span {
 
   .article >>> ol, .article >>> ul {
     padding-left: 1rem;
+  }
+
+  #go-back, span {
+    font-size: 0.8rem;
   }
 }
 </style>

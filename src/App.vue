@@ -37,13 +37,20 @@ i {
   vertical-align: middle;
 }
 
-#app {
-  font-family: 'Nanum Gothic', sans-serif;
-}
-
 .lead {
   margin-top: 2rem;
   color: rgb(255, 255, 255, 0.8);
   font-size: 1rem;
+}
+
+#app {
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+@media (min-width: 1200px) {
+  .jumbotron {
+    padding-left: 15% !important;
+    padding-right: 15% !important;
+  }
 }
 </style>
