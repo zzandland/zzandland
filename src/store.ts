@@ -10,7 +10,6 @@ converter.setFlavor('github');
 const processMd = (date: string, md: string) => {
   const html = converter.makeHtml(md)
     .replace(/&amp;/g, '&')
-    .replace(/&amp;/g, '&')
     .replace(/&lt;/g, '<')
     .replace(/&gt;/g, '>');
   const titleIndex: number = html.indexOf('</h1>');
