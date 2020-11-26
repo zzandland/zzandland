@@ -13,8 +13,11 @@
         class="my-3"
         :card="card"
       >
+        <div
+          v-if="!card.hasOwnProperty('title')"
+        />
         <b-card
-          v-if="cardType === 'ARTICLE'"
+          v-else-if="cardType === 'ARTICLE'"
           class="h-100"
           :title="card.title"
           :sub-title="card.subtitle"
@@ -87,7 +90,15 @@ export default class Cards<T> extends Vue {
   }
 
   generateRows() {
-    this.cardRows = this.cards.reduce((rows: T[][], card: T, index: number) => {
+    const emptyCards = [];
+    const mod = this.cards.length % this.numColumn;
+    if (mod) {
+      for (let i = 0; i < this.numColumn - mod; i += 1) {
+        emptyCards.push({} as T);
+      }
+    }
+
+    this.cardRows = this.cards.concat(emptyCards).reduce((rows: T[][], card: T, index: number) => {
       if (index % this.numColumn === 0) {
         rows.push([card]);
       } else {
