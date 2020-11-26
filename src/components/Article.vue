@@ -84,6 +84,10 @@ span {
   font-size: 0.8rem !important;
 }
 
+.article >>> blockquote p {
+  margin-bottom: 0.5rem;
+}
+
 .article >>> hr {
   background-color: #f36d33;
   margin-bottom: 3rem;
