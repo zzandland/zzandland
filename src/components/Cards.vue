@@ -16,32 +16,16 @@
         <div
           v-if="!card.hasOwnProperty('title')"
         />
-        <b-card
+        <ArticleCard
           v-else-if="cardType === 'ARTICLE'"
-          class="h-100"
-          :title="card.title"
-          :sub-title="card.subtitle"
-          :img-src="'https://s3-us-west-1.amazonaws.com/zzandland.io/assets/previews/' + card.date +'.jpg'"
-          :img-alt="card.title"
-          @click="onClick(card.path)"
-        >
-          <template #footer>
-            <small>{{ card.date }}</small>
-          </template>
-        </b-card>
-        <b-card
+          :article="card"
+          :on-click="onClick"
+        />
+        <ProjectCard
           v-else-if="cardType === 'PROJECT'"
-          class="my-3"
-          :title="card.title"
-          :img-src="card.imgUrl"
-          :img-alt="card.title"
-          @click="onClick(card.path)"
-        >
-          <b-card-text>{{ card.description }}</b-card-text>
-          <template #footer>
-            <small>View code on <i class="fab fa-github" /></small>
-          </template>
-        </b-card>
+          :project="card"
+          :on-click="onClick"
+        />
       </b-col>
     </b-row>
   </div>
@@ -49,8 +33,12 @@
 
 <script lang="ts">
 import { Component, Vue, Prop } from 'vue-property-decorator';
+import ArticleCard from './ArticleCard.vue';
+import ProjectCard from './ProjectCard.vue';
 
-@Component
+@Component({
+  components: { ArticleCard, ProjectCard },
+})
 export default class Cards<T> extends Vue {
   numColumn = -1;
 
@@ -64,6 +52,7 @@ export default class Cards<T> extends Vue {
 
   async created() {
     this.onResize();
+    console.log(this.cards);
     window.addEventListener('resize', this.onResize);
   }
 
