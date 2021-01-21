@@ -149,7 +149,7 @@ span {
   page-break-inside: avoid;
   font-size: 15px;
   line-height: 1.6;
-  margin: 0 0.5rem ).6rem 0.5rem;
+  margin: 0 0.5rem 0.6rem 0.5rem;
   max-width: 100%;
   overflow: auto;
   padding: 1em 1.5em;
