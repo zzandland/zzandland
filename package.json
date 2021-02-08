@@ -23,8 +23,7 @@
     "vue-cli-plugin-s3-deploy": "^4.0.0-rc4",
     "vue-property-decorator": "^8.4.2",
     "vue-router": "^3.4.3",
-    "vuex": "^3.5.1",
-    "webpack": "^4.44.1"
+    "vuex": "^3.5.1"
   },
   "devDependencies": {
     "@types/showdown": "^1.9.3",
@@ -36,13 +35,15 @@
     "@vue/cli-service": "~4.5.0",
     "@vue/eslint-config-airbnb": "^5.0.2",
     "@vue/eslint-config-typescript": "^5.0.2",
+    "babel-loader": "^8.2.2",
     "eslint": "^7.8.1",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-vue": "^7.0.0-beta.3",
     "lint-staged": "^9.5.0",
     "raw-loader": "^4.0.1",
     "typescript": "~3.9.3",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "webpack": "^5.21.2"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"
