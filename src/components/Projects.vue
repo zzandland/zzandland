@@ -26,8 +26,8 @@ export default class Projects extends Vue {
 
   type = 'PROJECT';
 
-  openTab(link: string) {
-    window.open(link);
+  openTab(url: string) {
+    window.open(url);
   }
 }
 </script>

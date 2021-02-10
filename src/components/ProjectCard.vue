@@ -1,6 +1,5 @@
 <template>
   <b-card
-    class="my-3"
     :title="project.title"
     :img-src="project.imgUrl"
     :img-alt="project.title"

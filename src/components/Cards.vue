@@ -52,7 +52,6 @@ export default class Cards<T> extends Vue {
 
   async created() {
     this.onResize();
-    console.log(this.cards);
     window.addEventListener('resize', this.onResize);
   }
 
@@ -112,6 +111,7 @@ img {
 
 .card {
   cursor: pointer;
+  height: 100%;
 }
 
 .card-body {
