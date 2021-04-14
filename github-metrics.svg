@@ -1024,14 +1024,14 @@
                         <rect x="0" y="0" width="460" height="8" fill="white" rx="5"/>
                     </mask>
                     <rect mask="url(#languages-bar)" x="0" y="0" width="0" height="8" fill="#d1d5da"/>
-                    <rect mask="url(#languages-bar)" x="0" y="0" width="272.55696892366836" height="8" fill="#f1e05a"/>
-                    <rect mask="url(#languages-bar)" x="272.55696892366836" y="0" width="90.41662451580902" height="8" fill="#f34b7d"/>
-                    <rect mask="url(#languages-bar)" x="362.9735934394773" y="0" width="47.16126211089319" height="8" fill="#3572A5"/>
-                    <rect mask="url(#languages-bar)" x="410.1348555503705" y="0" width="27.85580490733882" height="8" fill="#b07219"/>
-                    <rect mask="url(#languages-bar)" x="437.99066045770934" y="0" width="10.559964625912498" height="8" fill="#555555"/>
-                    <rect mask="url(#languages-bar)" x="448.55062508362187" y="0" width="4.645949112221356" height="8" fill="#199f4b"/>
-                    <rect mask="url(#languages-bar)" x="453.1965741958432" y="0" width="4.457934531831784" height="8" fill="#2c3e50"/>
-                    <rect mask="url(#languages-bar)" x="457.65450872767497" y="0" width="2.3454912723249977" height="8" fill="#89e051"/>
+                    <rect mask="url(#languages-bar)" x="0" y="0" width="252.58171009857872" height="8" fill="#f1e05a"/>
+                    <rect mask="url(#languages-bar)" x="252.58171009857872" y="0" width="82.29414372896764" height="8" fill="#f34b7d"/>
+                    <rect mask="url(#languages-bar)" x="334.8758538275464" y="0" width="59.61079500934689" height="8" fill="#3572A5"/>
+                    <rect mask="url(#languages-bar)" x="394.4866488368932" y="0" width="42.732292710316194" height="8" fill="#b07219"/>
+                    <rect mask="url(#languages-bar)" x="437.21894154720945" y="0" width="12.357889749019078" height="8" fill="#555555"/>
+                    <rect mask="url(#languages-bar)" x="449.57683129622853" y="0" width="4.229533205044127" height="8" fill="#199f4b"/>
+                    <rect mask="url(#languages-bar)" x="453.8063645012727" y="0" width="4.058370350785071" height="8" fill="#2c3e50"/>
+                    <rect mask="url(#languages-bar)" x="457.8647348520577" y="0" width="2.13526514794231" height="8" fill="#89e051"/>
                 </svg>
                 <div class="row fill-width">
                     <section>
@@ -1044,7 +1044,7 @@
                             </div>
                             <small>
                                 <div>
-                                    59.25%
+                                    54.91%
                                 </div>
                             </small>
                         </div>
@@ -1057,7 +1057,7 @@
                             </div>
                             <small>
                                 <div>
-                                    10.25%
+                                    12.96%
                                 </div>
                             </small>
                         </div>
@@ -1070,7 +1070,7 @@
                             </div>
                             <small>
                                 <div>
-                                    2.3%
+                                    2.69%
                                 </div>
                             </small>
                         </div>
@@ -1083,7 +1083,7 @@
                             </div>
                             <small>
                                 <div>
-                                    0.97%
+                                    0.88%
                                 </div>
                             </small>
                         </div>
@@ -1098,7 +1098,7 @@
                             </div>
                             <small>
                                 <div>
-                                    19.66%
+                                    17.89%
                                 </div>
                             </small>
                         </div>
@@ -1111,7 +1111,7 @@
                             </div>
                             <small>
                                 <div>
-                                    6.06%
+                                    9.29%
                                 </div>
                             </small>
                         </div>
@@ -1124,7 +1124,7 @@
                             </div>
                             <small>
                                 <div>
-                                    1.01%
+                                    0.92%
                                 </div>
                             </small>
                         </div>
@@ -1137,7 +1137,7 @@
                             </div>
                             <small>
                                 <div>
-                                    0.51%
+                                    0.46%
                                 </div>
                             </small>
                         </div>
@@ -3152,10 +3152,10 @@
                                 <path fill="#ebedf0" filter="url(#brightness1)" d="M0,1 1.7,2 1.7,2 0,1 z"/>
                                 <path fill="#ebedf0" filter="url(#brightness2)" d="M1.7,2 3.4,1 3.4,1 1.7,2 z"/>
                             </g>
-                            <g transform="translate(-5.1, 4)">
+                            <g transform="translate(-5.1, 3.5)">
                                 <path fill="#216e39" d="M1.7,2 0,1 1.7,0 3.4,1 z"/>
-                                <path fill="#216e39" filter="url(#brightness1)" d="M0,1 1.7,2 1.7,7 0,6 z"/>
-                                <path fill="#216e39" filter="url(#brightness2)" d="M1.7,2 3.4,1 3.4,6 1.7,7 z"/>
+                                <path fill="#216e39" filter="url(#brightness1)" d="M0,1 1.7,2 1.7,7.5 0,6.5 z"/>
+                                <path fill="#216e39" filter="url(#brightness2)" d="M1.7,2 3.4,1 3.4,6.5 1.7,7.5 z"/>
                             </g>
                         </g>
                     </g>
