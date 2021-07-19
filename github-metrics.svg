@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="480" height="598" class="">
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="562" class="">
     <defs>
         <style/>
     </defs>
@@ -1276,8 +1276,6 @@
     </h2>
                 <div class="row">
                     <ul class="habits">
-                        <li>Mostly pushes code around 15:00</li>
-                        <li>Mostly active on Monday</li>
                     </ul>
                 </div>
             </section>
