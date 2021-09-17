@@ -1,1 +1,3 @@
-![Metrics](https://github.com/zzandland/zzandland/blob/master/github-metrics.svg)
+<p align=center><img src="http://github-readme-streak-stats.herokuapp.com?user=zzandland&theme=gruvbox&hide_border=true" /></p>
+<p align=center><img src="https://github-readme-stats.vercel.app/api?username=zzandland&show_icons=true&theme=gruvbox&hide_border=true&count_private=true" /></p>
+<p align=center><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=zzandland&layout=compact&theme=gruvbox&hide_border=true" /></p>
